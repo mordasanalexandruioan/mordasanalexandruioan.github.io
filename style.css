@@ -1,0 +1,323 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    line-height: 1;
+    font-family: 'Kanit', sans-serif;
+    background: rgb(0, 0, 0);
+    color: rgb(230, 229, 231);
+}
+
+.presentation {
+    background-image: url(img/drumSetPres.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-origin: border-box;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    overflow: hidden;
+    font-family: 'Varela Round', sans-serif;
+    height: 38vh;
+}
+
+header {
+    background-color: rgb(34, 33, 33);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1%;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0px 1px 3px rgb(46, 46, 46);
+}
+
+header li {
+    list-style: none;
+    margin: 2px;
+}
+
+header a {
+    text-decoration: none;
+    color: rgb(216, 216, 216);
+}
+
+#name a {
+    font-weight: 600;
+    color: rgb(6, 134, 217);
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.menu-items li {
+    margin: 2px 4px;
+}
+
+.menu-items a {
+    color: rgb(77, 175, 241);
+}
+
+.aside-presentation {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    padding: 0% 1%;
+    width: 50%;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    background: rgba(104, 103, 103, 0.4);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    background: linear-gradient(177deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.246) 100%);
+    color: rgb(245, 240, 240);
+    backdrop-filter: blur(5px);
+    height: 38vh;
+    max-width: 250px;
+}
+
+.aside-presentation span {
+    text-transform: capitalize;
+    opacity: 70%;
+    color: rgb(245, 240, 240);
+}
+
+.aside-presentation p {
+    color: rgb(219, 217, 217);
+}
+
+.background-pres {
+    background: linear-gradient(177deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.822) 100%);
+    width: 100%;
+}
+
+.aside-presentation p {
+    margin-bottom: 0;
+}
+
+.about-me {
+    padding: 1% 2%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hobby {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.abt-me-intro {
+    color: white;
+}
+
+.abt-me-intro h2 {
+    font-weight: 200;
+    font-size: 1.2rem;
+}
+
+.abt-me-intro p {
+    font-weight: 200;
+    margin-top: 0;
+}
+
+.hobbies {
+    width: 80%;
+    max-width: 450px;
+    margin: 0 auto;
+    margin-top: 0.6em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 13em;
+}
+
+.first-Hobby {
+    background: url(img/aboutme-drum.jpg) no-repeat center/cover;
+    border: solid 2px rgb(14, 14, 14);
+    border-radius: 0.8em;
+}
+
+.second-Hobby {
+    background: url(img/aboutme-racing.jpg) no-repeat center/cover;
+    border: solid 2px rgb(14, 14, 14);
+    border-radius: 0.8em;
+}
+
+.third-Hobby {
+    background: url(img/aboutme-motorbike.jpg) no-repeat center/cover;
+    border: solid 2px rgb(14, 14, 14);
+    border-radius: 0.8em;
+}
+
+.info-hobby {
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    background: rgba(104, 103, 103, 0.4);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(2px);
+    border-radius: 0.8em;
+    padding: 1%;
+}
+
+.info-hobby h2 {
+    margin-bottom: 1%;
+    margin-top: 3%;
+}
+
+.projects {
+    padding: 2%;
+}
+
+.projects h2 {
+    font-size: 3rem;
+    opacity: 20%;
+    color: white;
+}
+
+.access-projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "pj1 pj2" "pj3 pj4" "pj5 pj5";
+    grid-gap: 3px;
+}
+
+.pj {
+    width: 100%;
+    height: 100%;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pj a {
+    text-decoration: none;
+    color: black;
+    border-radius: 0.5em;
+    font-size: 1.6rem;
+    color: white;
+    opacity: 40%;
+}
+
+.pj a:hover {
+    opacity: 90%;
+    text-shadow: 0px 1px 10px white, 0px 1px 15px white, 0px 1px 20px white;
+    transition: 0.5s;
+}
+
+.pj1 {
+    background: url(img/foodPJ.jpg) no-repeat center/cover;
+    grid-area: pj1;
+}
+
+.pj2 {
+    background: url(img/bestcityPJ.jpg) no-repeat center/cover;
+    grid-area: pj2;
+}
+
+.pj3 {
+    background: url(img/lotteryPJ.jpg) no-repeat center/cover;
+    grid-area: pj3;
+}
+
+.pj4 {
+    background: url(img/singaporePJ.webp) no-repeat center/cover;
+    grid-area: pj4;
+}
+
+.pj5 {
+    background: url(img/footballPJ.jpg) no-repeat center/cover;
+    grid-area: pj5;
+}
+
+@media (min-width:600px) {
+    header a {
+        font-size: 1.2rem;
+    }
+    .menu-items li {
+        margin: 2px 6px;
+    }
+    .aside-presentation {
+        font-size: 1.2rem;
+        height: 50vh;
+        max-width: 350px;
+        transition: 0.7s;
+    }
+    .presentation {
+        height: 50vh;
+    }
+    .projects h2 {
+        font-size: 3.7rem;
+        transition: 0.7s;
+    }
+    .access-projects {
+        max-width: 658px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width:927px) {
+    .menu-items li {
+        margin: 2px 8px;
+    }
+    .aside-presentation {
+        font-size: 1.3rem;
+        height: 65vh;
+        max-width: 350px;
+        transition: 0.7s;
+    }
+    .presentation {
+        height: 65vh;
+    }
+    .access-projects {
+        grid-gap: 12px;
+        max-width: 700px;
+        transition: 0.7s;
+    }
+    .about-me {
+        font-size: 1.2rem;
+        min-width: 950px;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .hobbies {
+        min-height: 15em;
+        transition: 0.7s;
+    }
+    .hobby {
+        max-width: 920px;
+        margin: 0 auto;
+    }
+    .projects {
+        min-width: 950px;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .projects h2 {
+        font-size: 4.5rem;
+        transition: 0.7s;
+    }
+}
+
+@media (min-width:1250px) {
+    .aside-presentation {
+        font-size: 1.9rem;
+        height: 85vh;
+        max-width: 450px;
+        transition: 0.7s;
+    }
+    .presentation {
+        height: 85vh;
+    }
+}
