@@ -34,7 +34,7 @@
                     <aside class="aside-presentation">
                         <p><span>front-end web developer</span></p>
                         <h1>Hi! <br> I'm Mordasan Alexandru, <br> Web Developer</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p>Lorem ipsum dolor amet consectetur.</p>
                     </aside>
                 </div>
             </section>
@@ -77,8 +77,17 @@
             </section>
 
             <section class="skills">
-                <div class="grahpic-skills">
-                    <p>Graphic</p>
+                <h2>Skills</h2>
+                <div class="graphic-skills">
+                    <li><span>HTML</span>
+                        <hr id="html-hr">
+                    </li>
+                    <li><span>CSS</span>
+                        <hr id="css-hr">
+                    </li>
+                    <li><span>JavaScript</span>
+                        <hr id="js-hr">
+                    </li>
                 </div>
                 <div class="animation-skills">
                     <p>Animation</p>
@@ -115,24 +124,26 @@
 
         <footer>
             <div class="contact">
-                <h2>Contact me</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam a laudantium veritatis velit, itaque eligendi incidunt beatae sapiente libero, fuga esse officia! Numquam pariatur ratione doloremque rem eum nihil tempora!
-                </p>
-                <div class="contact-logos">
-                    <div class="facebook">
-                        <img src="">
-                    </div>
+                <form action="index.html" method="POST">
+                    <fieldset>
+                        <legend>Contact me</legend>
 
-                    <div class="instagram">
-                        <img src="">
-                    </div>
+                        <div class="telephone">
+                            <p>0748350187</p>
+                        </div>
 
-                    <div class="linkedin">
-                        <img src="">
-                    </div>
-                    <p> <img src=""> 0748350187</p>
-                </div>
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="user_name">
+
+                        <label for="mail">Email Adress</label>
+                        <input type="email" id="mail" name="user_mail">
+
+                        <label for="mesage">Mesage</label>
+                        <textarea name="user_mesage" id="mesage"></textarea>
+                    </fieldset>
+
+                    <button>Send</button>
+                </form>
             </div>
         </footer>
     </div>

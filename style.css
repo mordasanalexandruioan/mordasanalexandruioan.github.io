@@ -9,7 +9,13 @@ body {
     font-family: 'Kanit', sans-serif;
     background: rgb(0, 0, 0);
     color: rgb(230, 229, 231);
+    min-height: 100vh;
 }
+
+
+/*==============================================
+Top page
+==============================================*/
 
 .presentation {
     background-image: url(img/drumSetPres.jpg);
@@ -23,6 +29,10 @@ body {
     overflow: hidden;
     font-family: 'Varela Round', sans-serif;
     height: 38vh;
+}
+
+.container {
+    min-height: 100vh;
 }
 
 header {
@@ -92,6 +102,13 @@ header a {
 
 .aside-presentation p {
     color: rgb(219, 217, 217);
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.aside-presentation h1 {
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 .background-pres {
@@ -99,9 +116,15 @@ header a {
     width: 100%;
 }
 
-.aside-presentation p {
-    margin-bottom: 0;
-}
+
+/*==============================================
+Top page
+==============================================*/
+
+
+/*==============================================
+About me
+==============================================*/
 
 .about-me {
     padding: 1% 2%;
@@ -174,6 +197,70 @@ header a {
     margin-top: 3%;
 }
 
+
+/*==============================================
+About me
+==============================================*/
+
+
+/*==============================================
+Skills
+==============================================*/
+
+.skills {
+    /* border: red 1px solid; */
+    min-height: 65vh;
+    padding: 1% 2%;
+}
+
+.skills h2 {
+    font-size: 3rem;
+    opacity: 20%;
+    color: white;
+}
+
+.graphic-skills {
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 0.8em;
+    width: 90%;
+    padding: 1%;
+    list-style: none;
+    background-color: rgba(253, 251, 251, 0.096);
+}
+
+.graphic-skills li {
+    margin: 5px 0px;
+}
+
+.graphic-skills hr {
+    height: 0.5em;
+    border: solid black 1px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(100deg, rgb(228, 228, 228) 0%, rgba(92, 189, 255, 1) 100%);
+    border-radius: 0.8em;
+    margin-left: 1px;
+}
+
+#html-hr {
+    width: 87%;
+}
+
+#css-hr {
+    width: 92%;
+    background: linear-gradient(100deg, rgb(228, 228, 228) 0%, rgb(0, 158, 206) 100%);
+}
+
+#js-hr {
+    width: 85%;
+    background: linear-gradient(100deg, rgb(228, 228, 228) 0%, rgba(6, 134, 217, 1) 100%);
+}
+
+
+/*==============================================
+Skills
+==============================================*/
+
 .projects {
     padding: 2%;
 }
@@ -241,6 +328,67 @@ header a {
     grid-area: pj5;
 }
 
+.contact {
+    background-color: white;
+    color: black;
+    padding: 0.7em;
+    margin-top: 4em;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+legend {
+    font-weight: 600;
+    padding: 0;
+    margin-bottom: 0.7em;
+    font-size: 1.4rem;
+}
+
+label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 0.3em;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    font-size: 1.2rem;
+    padding: 0.3em;
+    margin-bottom: 0.9em;
+    border-radius: 0.5em;
+    border: solid 2px rgb(6, 134, 217);
+    color: rgb(122, 121, 121);
+}
+
+form {
+    position: relative;
+}
+
+textarea {
+    width: 100%;
+    min-height: 100px;
+    max-height: 150px;
+}
+
+.telephone {
+    position: absolute;
+    top: 0;
+    right: 0.3em;
+    margin: 0;
+    opacity: 40%;
+    letter-spacing: 0.05em;
+    font-size: 1.1rem;
+    color: rgb(6, 134, 217);
+}
+
+.telephone p {
+    margin: 0;
+}
+
 @media (min-width:600px) {
     header a {
         font-size: 1.2rem;
@@ -253,6 +401,10 @@ header a {
         height: 50vh;
         max-width: 350px;
         transition: 0.7s;
+    }
+    .aside-presentation h1 {
+        margin-top: 4%;
+        margin-bottom: 4%;
     }
     .presentation {
         height: 50vh;
@@ -277,6 +429,10 @@ header a {
         max-width: 350px;
         transition: 0.7s;
     }
+    .aside-presentation h1 {
+        margin-top: 6%;
+        margin-bottom: 6%;
+    }
     .presentation {
         height: 65vh;
     }
@@ -287,7 +443,6 @@ header a {
     }
     .about-me {
         font-size: 1.2rem;
-        min-width: 950px;
         max-width: 1000px;
         margin: 0 auto;
     }
@@ -300,7 +455,7 @@ header a {
         margin: 0 auto;
     }
     .projects {
-        min-width: 950px;
+        min-width: 900px;
         max-width: 1000px;
         margin: 0 auto;
     }
