@@ -111,7 +111,7 @@ About me
 ==============================================*/
 
 .about-me {
-    padding: 2em 1em;
+    padding: 2em 0;
 }
 
 .abt-me-intro {
@@ -119,6 +119,9 @@ About me
     flex-direction: row;
     justify-content: space-between;
     position: relative;
+    padding: 2em 1em 1em;
+    min-height: 331px;
+    margin-bottom: 2em;
 }
 
 .abt-me-intro .shape,
@@ -166,8 +169,7 @@ About me
     }
 }
 
-.abt-me-intro .abt-me-content h2,
-.abt-me-intro .abt-me-content p {
+.backgroundStyling {
     background-color: rgba(255, 255, 255, 0.150);
     padding: .2em;
     border-radius: .3em;
@@ -186,11 +188,54 @@ About me
 
 .abt-me-intro img {
     position: absolute;
-    bottom: 0;
+    bottom: 2em;
     max-width: 320px;
     height: 200px;
     right: 0;
 }
+
+
+/*==============================================
+Hobbies
+==============================================*/
+
+.hobbies {
+    padding: 1.45em 1.24em;
+    position: relative;
+}
+
+.hobbies p {
+    text-shadow: 0 0 2px rgb(68, 68, 68);
+}
+
+.first-Hobby {
+    background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.05) 0px, rgba(0, 0, 0, 0.05) 2px, transparent 2px, transparent 4px), linear-gradient(45deg, rgb(212, 1, 1), rgb(10, 10, 10));
+}
+
+.second-Hobby {
+    background-image: repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.04) 0px, rgba(0, 0, 0, 0.04) 2px, transparent 2px, transparent 4px), linear-gradient(0deg, rgb(241, 241, 241), rgb(202, 4, 4));
+}
+
+.third-Hobby {
+    background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.09), rgba(0, 0, 0, 0.09), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.04), transparent, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.09), rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.07) 4px), linear-gradient(0deg, rgb(0, 0, 0), rgb(240, 240, 240));
+}
+
+.hobbyToImage {
+    background-color: rgba(0, 0, 0, 0.144);
+    border: none;
+    backdrop-filter: blur(3px);
+    position: absolute;
+    width: 30px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    color: white;
+}
+
+
+/*==============================================
+Hobbies
+==============================================*/
 
 
 /*==============================================
