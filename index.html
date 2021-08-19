@@ -16,7 +16,8 @@
 <body>
     <div class="container">
         <header>
-            <li id="name"><a href="#">Mortty</a></li>
+            <li id="menu"><i class="fas fa-bars"></i><i class="far fa-minus-square"></i></li>
+
             <ul class="menu-items">
                 <li><a href="#">About me</a></li>
                 <li><a href="#">Skills</a></li>
@@ -37,6 +38,7 @@
             </section>
 
             <section class="about-me">
+
                 <aside class="abt-me-intro">
                     <div class="abt-me-content">
                         <h2 class="backgroundStyling">What I do </h2>
@@ -91,7 +93,7 @@
             </section>
 
             <section class="skills">
-                <h2>Skills</h2>
+                <h2 id="titleSkills">Skills</h2>
                 <ul class="graphic-skills">
                     <li><span>HTML</span> 90%
                         <span class="bubble b1"></span>
@@ -153,31 +155,28 @@
 
         </main>
 
-        <footer>
-            <div class="contact">
-                <form action="index.html" method="POST">
-                    <fieldset>
-                        <legend>Contact me</legend>
+        <footer class="contact">
+            <form action="index.html" method="POST">
+                <fieldset>
+                    <legend>Contact me</legend>
 
-                        <div class="telephone">
-                            <p>0748350187</p>
-                        </div>
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="user_name" placeholder="Popescu Ioan">
 
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="user_name">
+                    <label for="mail">Email Adress</label>
+                    <input type="email" id="mail" name="user_mail" placeholder="example@mail.com">
 
-                        <label for="mail">Email Adress</label>
-                        <input type="email" id="mail" name="user_mail">
+                    <label for="mesage">Message</label>
+                    <textarea name="user_mesage" id="mesage" placeholder="Write something.."></textarea>
+                </fieldset>
 
-                        <label for="mesage">Mesage</label>
-                        <textarea name="user_mesage" id="mesage"></textarea>
-                    </fieldset>
-
-                    <button>Send</button>
-                </form>
-            </div>
+                <button>Send</button>
+            </form>
         </footer>
     </div>
+
+    <script src="functions.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>

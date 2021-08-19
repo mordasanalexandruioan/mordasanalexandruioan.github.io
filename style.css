@@ -23,6 +23,7 @@ Top page
         position: fixed;
         font-style: italic;
         z-index: 10;
+        overflow: hidden;
     }
     
     header:before {
@@ -53,20 +54,116 @@ Top page
         width: 100%;
         z-index: 1;
         font-size: .9rem;
+        transform: translateY(40px);
     }
     
-    header #name {
-        padding: 0 .5em;
+    header .menu-items.appear {
+        animation: menuItemsShow .5s forwards;
+    }
+    
+    header .menu-items.desappear {
+        animation: menuItemsClose .5s forwards;
+    }
+    
+    @keyframes menuItemsShow {
+        0% {
+            transform: translateY(40px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
+    
+    @keyframes menuItemsClose {
+        0% {
+            transform: translateY(0px);
+        }
+        100% {
+            transform: translateY(40px);
+        }
+    }
+    
+    header #menu {
+        padding: 0 .5em 0 .8em;
         background-color: transparent;
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        border-right: solid 2px rgba(255, 255, 255, 0.253);
+        position: relative;
+        min-width: 52px;
+        overflow: hidden;
     }
     
-    header #name a {
+    header #menu .fa-bars,
+    header #menu .fa-minus-square {
+        position: absolute;
         color: rgb(223, 1, 1);
+    }
+    
+    header #menu .fa-minus-square {
+        top: -16px;
+        left: 19px;
+    }
+    
+    header #menu .fa-bars {
+        animation: showBars .5s forwards;
+    }
+    
+    header #menu .fa-bars.desappear {
+        animation: closeBars .5s forwards;
+    }
+    
+    header #menu .fa-minus-square.desappear {
+        animation: closeMinus .5s forwards;
+    }
+    
+    header #menu .fa-minus-square.appear {
+        animation: showMinus .5s forwards;
+    }
+    
+    @keyframes showBars {
+        0% {
+            top: 16px;
+            left: -19px;
+        }
+        100% {
+            top: 16px;
+            left: 19px;
+        }
+    }
+    
+    @keyframes closeBars {
+        0% {
+            top: 16px;
+            left: 19px;
+        }
+        100% {
+            top: 16px;
+            left: -19px;
+        }
+    }
+    
+    @keyframes showMinus {
+        0% {
+            top: -16px;
+            left: 19px;
+        }
+        100% {
+            top: 16px;
+            left: 19px;
+        }
+    }
+    
+    @keyframes closeMinus {
+        0% {
+            top: 16px;
+            left: 19px;
+        }
+        100% {
+            top: -16px;
+            left: 19px;
+        }
     }
     
     header .menu-items a {
@@ -84,6 +181,7 @@ PRESENTATION
         background-blend-mode: overlay, overlay, overlay, overlay, normal;
         padding: 70px 1.20em;
         color: white;
+        overflow: hidden;
     }
     
     .presentation .aside-presentation span {
@@ -92,6 +190,18 @@ PRESENTATION
     
     .presentation .aside-presentation h1 {
         color: rgb(200, 0, 0);
+    }
+    
+    .presentation .aside-presentation {
+        opacity: 0;
+        transition: transform 1s;
+        transform: translateX(-300px);
+        transition-delay: .2s;
+    }
+    
+    .presentation .aside-presentation.appear {
+        opacity: 1;
+        transform: translateX(0px);
     }
     /*============================================
 PRESENTATION
@@ -102,6 +212,7 @@ About me
     
     .about-me {
         padding: 2em 0;
+        overflow: hidden;
     }
     
     .abt-me-intro {
@@ -191,6 +302,15 @@ Hobbies
         padding: 1.45em 1.24em;
         position: relative;
         min-height: 250px;
+        opacity: 0;
+        transition: transform 1s;
+        transform: translateX(-100%);
+        transition-delay: .3s;
+    }
+    
+    .hobbies.appear {
+        opacity: 1;
+        transform: translateX(0px);
     }
     
     .hobbies p {
@@ -234,13 +354,13 @@ Skills
         padding: 2em 1em 3em;
     }
     
-    .skills h2 {
+    .skills #titleSkills {
         display: table;
         color: rgb(233, 233, 233);
         position: relative;
     }
     
-    .skills h2:before {
+    .skills #titleSkills:before {
         position: absolute;
         content: '';
         width: calc(100% + 25px);
@@ -248,6 +368,21 @@ Skills
         background-color: red;
         bottom: -2px;
         left: 0;
+    }
+    
+    .skills #titleSkills.appear {
+        animation: skillsTitleBar 1.3s .3s;
+    }
+    
+    @keyframes skillsTitleBar {
+        0%,
+        100% {
+            width: 61px;
+        }
+        50% {
+            width: 70%;
+            max-width: 400px;
+        }
     }
     
     .skills h2:hover:before {
@@ -427,7 +562,7 @@ Projects
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: .3em;
+        margin: 1.3em .3em;
         border-radius: 15%;
         overflow: hidden;
     }
@@ -467,4 +602,110 @@ Projects
     
     .pj2 {
         background: url(img/tools.png) no-repeat center/cover;
+    }
+    
+    .pj3 {
+        background: url(img/lottery.png) no-repeat center/cover;
+    }
+    /*================================================
+    Contact
+    ===========================================*/
+    
+    .contact {
+        padding: 2em 1.24em 3em;
+        background-color: rgb(253, 252, 252);
+        color: rgb(177, 0, 0);
+        position: relative;
+    }
+    
+    .contact fieldset {
+        border: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .contact legend {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 1em;
+    }
+    
+    .contact label,
+    .contact input,
+    .contact textarea {
+        font-style: italic;
+    }
+    
+    .contact input {
+        border: none;
+        border-bottom: solid 2px black;
+        margin-bottom: 1.7em;
+        outline: none;
+        color: rgb(83, 83, 83);
+        max-width: 372px;
+    }
+    
+    .contact textarea {
+        padding: .3em;
+        min-height: 100px;
+        max-width: 480px;
+        min-width: 280px;
+    }
+    
+    .contact button {
+        display: table;
+        background-color: transparent;
+        color: #000;
+        border: solid 2px red;
+        border-radius: 1em;
+        font-size: 1.1rem;
+        width: 100px;
+        height: 40px;
+        padding-top: .2em;
+        margin-top: 1em;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        transition: color .5s, border-color.3s;
+        margin-left: auto;
+    }
+    
+    .contact button:before {
+        position: absolute;
+        content: '';
+        width: 110%;
+        height: 110%;
+        background-color: black;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transform: translateX(-85%) rotate(45deg);
+        transition: transform .4s;
+    }
+    
+    .contact button:after {
+        position: absolute;
+        content: '';
+        width: 110%;
+        height: 110%;
+        background-color: red;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transform: translateX(80%) rotate(45deg);
+        transition: transform .4s;
+    }
+    
+    .contact button:hover:before {
+        transform: translateX(-30%) rotate(45deg);
+    }
+    
+    .contact button:hover:after {
+        transform: translateX(24%) rotate(45deg);
+    }
+    
+    .contact button:hover {
+        color: #fff;
+        border-color: rgb(110, 110, 110);
     }
