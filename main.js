@@ -3,9 +3,11 @@ let menuBars = document.getElementsByClassName('fa-bars')[0];
 const asidePresentation = document.querySelectorAll('.aside-presentation');
 const hobby = document.querySelectorAll('.hobbies');
 const skillsTitle = document.querySelectorAll('#titleSkills');
+const buttonHobbyToImage = document.getElementsByClassName('hobbyToImage')[0];
 
 
 menuHeader.addEventListener('click', eventMenuClick);
+buttonHobbyToImage.addEventListener('click', eventHobbiesButton);
 
 const appearOptions = {
     threshold: 0,

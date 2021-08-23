@@ -18,3 +18,18 @@ let eventMenuClick = e => {
     }
 
 }
+
+let eventHobbiesButton = e => {
+    let obj = e.target;
+
+    let hobbyImg = document.getElementsByClassName('hobby-image')[0];
+    let button = document.getElementsByClassName('hobbyToImage')[0];
+
+    if (obj.className == "hobbyToImage" && button.children[0].className == "fas fa-chevron-right") {
+        hobbyImg.className += " move";
+        button.children[0].className = "fas fa-chevron-left";
+    } else if (obj.className == "hobbyToImage" && button.children[0].className == "fas fa-chevron-left") {
+        hobbyImg.className = "hobby-image";
+        button.children[0].className = "fas fa-chevron-right";
+    }
+}
