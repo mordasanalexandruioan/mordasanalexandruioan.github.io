@@ -3,11 +3,14 @@ let menuBars = document.getElementsByClassName('fa-bars')[0];
 const asidePresentation = document.querySelectorAll('.aside-presentation');
 const hobby = document.querySelectorAll('.hobbies');
 const skillsTitle = document.querySelectorAll('#titleSkills');
-const buttonHobbyToImage = document.getElementsByClassName('hobbyToImage')[0];
-
+const button1HobbyToImage = document.getElementsByClassName('hobbyToImage')[0];
+const button2HobbyToImage = document.getElementsByClassName('hobbyToImage')[1];
+const button3HobbyToImage = document.getElementsByClassName('hobbyToImage')[2];
 
 menuHeader.addEventListener('click', eventMenuClick);
-buttonHobbyToImage.addEventListener('click', eventHobbiesButton);
+button1HobbyToImage.addEventListener('click', eventHobbiesButton1);
+button2HobbyToImage.addEventListener('click', eventHobbiesButton2);
+button3HobbyToImage.addEventListener('click', eventHobbiesButton3);
 
 const appearOptions = {
     threshold: 0,

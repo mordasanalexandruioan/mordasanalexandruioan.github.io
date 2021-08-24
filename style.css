@@ -182,6 +182,8 @@ PRESENTATION
         padding: 70px 1.20em;
         color: white;
         overflow: hidden;
+        display: flex;
+        align-items: center;
     }
     
     .presentation .aside-presentation span {
@@ -195,13 +197,13 @@ PRESENTATION
     .presentation .aside-presentation {
         opacity: 0;
         transition: transform 1s;
-        transform: translateX(-300px);
+        transform: translateX(-100%);
         transition-delay: .2s;
     }
     
     .presentation .aside-presentation.appear {
         opacity: 1;
-        transform: translateX(0px);
+        transform: translateX(0%);
     }
     /*============================================
 PRESENTATION
@@ -779,7 +781,20 @@ Projects
         }
     }
     
+    @keyframes scaleAnim {
+        0%,
+        100% {
+            transform: translateX(0%) scale(1);
+        }
+        50% {
+            transform: translateX(0%) scale(1.1);
+        }
+    }
+    
     @media (min-width:720px) {
+        .presentation {
+            height: 37vh;
+        }
         .hobby {
             flex-direction: row;
             flex-wrap: wrap;
@@ -788,11 +803,35 @@ Projects
         }
         .hobbies {
             max-width: 320px;
-            margin: .4em;
+            margin: .6em;
+            transform: translateX(0%);
+            opacity: 0;
+            transition: opacity .8s;
+            transition-delay: .3s;
+        }
+        .hobbies.appear {
+            opacity: 1;
+            animation: scaleAnim 1s linear;
         }
         .hobby-image img {
             width: 260px;
             height: 190px;
             margin-right: .9em;
+        }
+        .skills .graphic-skills {
+            flex-direction: row;
+        }
+        .skills .graphic-skills li {
+            margin: 2em .6em;
+        }
+        .skills .graphic-skills li:hover {
+            margin: 1em .6em;
+        }
+        .projects .access-projects {
+            display: grid;
+            grid-template-columns: repeat(2, 200px);
+            grid-template-rows: auto;
+            grid-gap: 2em;
+            margin-top: 2em;
         }
     }
