@@ -1,0 +1,106 @@
+.contact {
+    padding: 2em 1.24em 3em;
+    background-color: rgb(253, 252, 252);
+    color: rgb(177, 0, 0);
+    position: relative;
+    & fieldset {
+        border: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    & legend {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 1em;
+        @include mq('med') {
+            font-size: 1.9rem;
+        }
+    }
+    & label,
+    & input,
+    & textarea {
+        font-style: italic;
+    }
+    & label {
+        @include mq('med') {
+            font-size: 1.2rem;
+            margin-bottom: .2em;
+        }
+    }
+    & input {
+        border: none;
+        border-bottom: solid 2px black;
+        margin-bottom: 1.7em;
+        outline: none;
+        color: rgb(83, 83, 83);
+        max-width: 372px;
+        @include mq('med') {
+            font-size: 1rem;
+        }
+    }
+    & textarea {
+        padding: .3em;
+        min-height: 100px;
+        max-width: 480px;
+        min-width: 280px;
+        @include mq('med') {
+            font-size: 1rem;
+        }
+    }
+    & button {
+        display: table;
+        background-color: transparent;
+        color: #000;
+        border: solid 2px red;
+        border-radius: 1em;
+        font-size: 1.1rem;
+        width: 100px;
+        height: 40px;
+        padding-top: .2em;
+        margin-top: 1em;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        transition: color .5s, border-color .3s;
+        margin-left: auto;
+        @include mq('med') {
+            margin-top: 2.3em;
+            margin-left: 0;
+        }
+    }
+    & button:before {
+        position: absolute;
+        content: '';
+        width: 110%;
+        height: 110%;
+        background-color: black;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transform: translateX(-85%) rotate(45deg);
+        transition: transform .4s;
+    }
+    & button:after {
+        position: absolute;
+        content: '';
+        width: 110%;
+        height: 110%;
+        background-color: red;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transform: translateX(80%) rotate(45deg);
+        transition: transform .4s;
+    }
+    & button:hover:before {
+        transform: translateX(-30%) rotate(45deg);
+    }
+    & button:hover:after {
+        transform: translateX(24%) rotate(45deg);
+    }
+    & button:hover {
+        color: #fff;
+        border-color: rgb(110, 110, 110);
+    }
+}
