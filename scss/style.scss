@@ -6,6 +6,19 @@
 'base/reset';
 //layout
 @import 'layout/header',
+'layout/aside',
 'layout/main',
 'layout/footer';
 //components
+@import 'components/home-top',
+'components/bg-img',
+'components/content',
+'components/hobbies',
+'components/imgs-loader',
+'components/list',
+'components/logo',
+'components/menu-click',
+'components/proj',
+'components/projects',
+'components/skills',
+'components/work';
