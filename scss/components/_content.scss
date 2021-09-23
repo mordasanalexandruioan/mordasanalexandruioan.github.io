@@ -1,0 +1,16 @@
+.content.about {
+    position: relative;
+    @include flexy($align: center);
+    margin-top: .7em;
+    & h2 {
+        margin: 0;
+        color: rgba(117, 117, 117, 0.267);
+        font-size: 4rem;
+        position: absolute;
+    }
+    & p {
+        margin: 0;
+        font-weight: 600;
+        font-size: 1.1rem;
+    }
+}

@@ -1,0 +1,13 @@
+.projects {
+    padding-top: 7em;
+    & #title-prj {
+        letter-spacing: -.06em;
+        line-height: .8;
+        font-size: 1.8rem;
+        margin-bottom: 2em;
+        span {
+            font-size: 1.1rem;
+            color: rgb(231, 8, 8);
+        }
+    }
+}

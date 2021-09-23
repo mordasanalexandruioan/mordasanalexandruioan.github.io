@@ -1,0 +1,15 @@
+.imgs-loader {
+    @include flexy($dir: row, $align: center, $just: center);
+    overflow: hidden;
+    & img {
+        width: 50%;
+        max-width: 160px;
+        height: 100px;
+        z-index: -1;
+        right: 0;
+        margin: .2em;
+    }
+    & img:nth-child(1) {
+        transition: opacity .7s ease-out;
+    }
+}

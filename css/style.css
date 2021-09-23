@@ -30,12 +30,21 @@ aside {
 main {
   padding: 4em 0.6em 0;
 }
+main h3 {
+  text-align: right;
+  margin-top: 3em;
+  color: #8b8b8b;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 0.92rem;
+  letter-spacing: 0.2em;
+}
 
 .home-top {
   position: relative;
 }
 .home-top .content {
-  padding-top: 18.5em;
+  padding-top: 20.5em;
   z-index: 1;
 }
 .home-top .content h1 {
@@ -69,6 +78,50 @@ main {
   margin-right: auto;
   display: block;
   z-index: -2;
+}
+
+.content.about {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 0.7em;
+}
+.content.about h2 {
+  margin: 0;
+  color: rgba(117, 117, 117, 0.267);
+  font-size: 4rem;
+  position: absolute;
+}
+.content.about p {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.imgs-loader {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.imgs-loader img {
+  width: 50%;
+  max-width: 160px;
+  height: 100px;
+  z-index: -1;
+  right: 0;
+  margin: 0.2em;
+}
+.imgs-loader img:nth-child(1) {
+  transition: opacity 0.7s ease-out;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo {
@@ -135,6 +188,59 @@ main {
 }
 .menu-click #menu.opened i:nth-child(3) {
   transform: rotate(-40deg);
+}
+
+.proj {
+  width: 100%;
+  border: solid 2px black;
+  border-radius: 0.8em;
+  padding: 0.4em 0.4em 0.2em;
+  position: relative;
+  margin: 0 0 1em;
+}
+.proj h2 {
+  font-size: 1.3rem;
+  margin: 1em 0 0 1em;
+  position: absolute;
+  top: 0;
+}
+.proj img {
+  width: 100%;
+  height: 500px;
+  border-radius: 0.8em;
+}
+.proj button {
+  position: absolute;
+  padding-top: 0.5em;
+  right: 2em;
+  bottom: 2em;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  background-color: rgba(255, 255, 255, 0.431);
+  backdrop-filter: blur(2px);
+  border: solid 2px white;
+}
+.proj button svg {
+  transform: rotate(90deg);
+}
+
+.projects {
+  padding-top: 7em;
+}
+.projects #title-prj {
+  letter-spacing: -0.06em;
+  line-height: 0.8;
+  font-size: 1.8rem;
+  margin-bottom: 2em;
+}
+.projects #title-prj span {
+  font-size: 1.1rem;
+  color: #e70808;
+}
+
+.work {
+  margin-bottom: 3em;
 }
 
 /*# sourceMappingURL=style.css.map */
