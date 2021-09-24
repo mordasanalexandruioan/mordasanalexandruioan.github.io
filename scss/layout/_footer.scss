@@ -1,0 +1,26 @@
+footer {
+    padding: 0 1.2em;
+    & ul {
+        padding: 0;
+        list-style: none;
+        li {
+            color: rgb(139, 139, 139);
+        }
+    }
+    & h2 {
+        font-size: 1.3rem;
+    }
+    & p {
+        color: rgb(139, 139, 139);
+    }
+    & span,
+    & a {
+        color: rgb(231, 8, 8);
+        text-decoration: none;
+        font-weight: 500;
+    }
+    #insta {
+        color: #000;
+        margin-top: 2.5em;
+    }
+}

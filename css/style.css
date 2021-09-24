@@ -39,6 +39,35 @@ main h3 {
   font-size: 0.92rem;
   letter-spacing: 0.2em;
 }
+main hr {
+  margin: 4em 0;
+}
+
+footer {
+  padding: 0 1.2em;
+}
+footer ul {
+  padding: 0;
+  list-style: none;
+}
+footer ul li {
+  color: #8b8b8b;
+}
+footer h2 {
+  font-size: 1.3rem;
+}
+footer p {
+  color: #8b8b8b;
+}
+footer span, footer a {
+  color: #e70808;
+  text-decoration: none;
+  font-weight: 500;
+}
+footer #insta {
+  color: #000;
+  margin-top: 2.5em;
+}
 
 .home-top {
   position: relative;
@@ -98,6 +127,20 @@ main h3 {
   font-size: 1.1rem;
 }
 
+.hobbies .imgs-loader {
+  display: flex;
+  flex-direction: column;
+}
+.hobbies .imgs-loader img {
+  width: 55%;
+}
+.hobbies .imgs-loader img:nth-child(1) {
+  align-self: flex-start;
+}
+.hobbies .imgs-loader img:nth-child(3) {
+  align-self: flex-end;
+}
+
 .imgs-loader {
   display: flex;
   flex-direction: row;
@@ -106,15 +149,12 @@ main h3 {
   overflow: hidden;
 }
 .imgs-loader img {
-  width: 50%;
-  max-width: 160px;
-  height: 100px;
+  width: 100%;
+  min-width: 150px;
+  height: 100%;
   z-index: -1;
   right: 0;
   margin: 0.2em;
-}
-.imgs-loader img:nth-child(1) {
-  transition: opacity 0.7s ease-out;
 }
 
 .list {
@@ -122,6 +162,7 @@ main h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0 1.2em;
 }
 
 .logo {
@@ -194,29 +235,37 @@ main h3 {
   width: 100%;
   border: solid 2px black;
   border-radius: 0.8em;
-  padding: 0.4em 0.4em 0.2em;
+  padding: 0.4em 0.4em 0.1em;
   position: relative;
   margin: 0 0 1em;
 }
 .proj h2 {
   font-size: 1.3rem;
-  margin: 1em 0 0 1em;
+  margin: 1em 0 0 0.5em;
   position: absolute;
   top: 0;
+  color: #e70808;
+}
+.proj h2 span {
+  color: #bebebe;
+  font-weight: 300;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 .proj img {
   width: 100%;
-  height: 500px;
+  height: 470px;
   border-radius: 0.8em;
 }
 .proj button {
   position: absolute;
   padding-top: 0.5em;
-  right: 2em;
-  bottom: 2em;
+  right: 1.5em;
+  bottom: 1.5em;
   border-radius: 50%;
-  width: 65px;
-  height: 65px;
+  width: 60px;
+  height: 60px;
   background-color: rgba(255, 255, 255, 0.431);
   backdrop-filter: blur(2px);
   border: solid 2px white;
@@ -240,7 +289,13 @@ main h3 {
 }
 
 .work {
-  margin-bottom: 3em;
+  margin-bottom: 5em;
+}
+
+.copyright {
+  padding: 3em 0;
+  text-align: center;
+  font-weight: 300;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,3 +1,4 @@
 .list {
     @include flexy($dir: column, $align: center, $just: center);
+    padding: 0 1.2em;
 }

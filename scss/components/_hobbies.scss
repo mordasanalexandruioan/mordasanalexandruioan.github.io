@@ -1,0 +1,14 @@
+.hobbies {
+    & .imgs-loader {
+        @include flexy($dir: column);
+        img {
+            width: 55%;
+        }
+        img:nth-child(1) {
+            align-self: flex-start;
+        }
+        img:nth-child(3) {
+            align-self: flex-end;
+        }
+    }
+}
