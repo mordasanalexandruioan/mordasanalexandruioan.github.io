@@ -1,0 +1,7 @@
+.what-i-do {
+    max-width: 470px;
+    margin: 0 auto;
+    @include mq('sm') {
+        max-width: 550px;
+    }
+}

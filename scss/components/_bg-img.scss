@@ -9,5 +9,8 @@
         margin-right: auto;
         display: block;
         z-index: -2;
+        @include mq('sm') {
+            margin-right: 0;
+        }
     }
 }

@@ -1,13 +1,23 @@
 .home-top {
     position: relative;
+    @include mq('sm') {
+        margin-bottom: 10em;
+    }
     & .content {
         padding-top: 20.5em;
         z-index: 1;
+        @include mq('sm') {
+            padding-top: 5em;
+            width: 60%;
+        }
         h1 {
             font-size: 1.8rem;
             margin: .3em 0;
             color: rgb(231, 8, 8);
             letter-spacing: -1px;
+            @include mq('sm') {
+                font-size: 2.2rem;
+            }
         }
         span {
             color: rgb(139, 139, 139);

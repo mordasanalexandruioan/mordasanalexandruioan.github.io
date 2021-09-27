@@ -1,4 +1,8 @@
 .list {
     @include flexy($dir: column, $align: center, $just: center);
-    padding: 0 1.2em;
+    padding: 0 1em;
+    @include mq('med') {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }

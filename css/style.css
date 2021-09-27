@@ -72,15 +72,31 @@ footer #insta {
 .home-top {
   position: relative;
 }
+@media (min-width: 570px) {
+  .home-top {
+    margin-bottom: 10em;
+  }
+}
 .home-top .content {
   padding-top: 20.5em;
   z-index: 1;
+}
+@media (min-width: 570px) {
+  .home-top .content {
+    padding-top: 5em;
+    width: 60%;
+  }
 }
 .home-top .content h1 {
   font-size: 1.8rem;
   margin: 0.3em 0;
   color: #e70808;
   letter-spacing: -1px;
+}
+@media (min-width: 570px) {
+  .home-top .content h1 {
+    font-size: 2.2rem;
+  }
 }
 .home-top .content span {
   color: #8b8b8b;
@@ -107,6 +123,11 @@ footer #insta {
   margin-right: auto;
   display: block;
   z-index: -2;
+}
+@media (min-width: 570px) {
+  .bg-img img {
+    margin-right: 0;
+  }
 }
 
 .content.about {
@@ -148,6 +169,11 @@ footer #insta {
   align-items: center;
   overflow: hidden;
 }
+@media (min-width: 570px) {
+  .imgs-loader {
+    flex-direction: column;
+  }
+}
 .imgs-loader img {
   width: 100%;
   min-width: 150px;
@@ -162,7 +188,13 @@ footer #insta {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 1.2em;
+  padding: 0 1em;
+}
+@media (min-width: 724px) {
+  .list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .logo {
@@ -233,11 +265,17 @@ footer #insta {
 
 .proj {
   width: 100%;
+  max-width: 298px;
   border: solid 2px black;
   border-radius: 0.8em;
   padding: 0.4em 0.4em 0.1em;
   position: relative;
   margin: 0 0 1em;
+}
+@media (min-width: 724px) {
+  .proj {
+    margin: 0 0.55em 1em;
+  }
 }
 .proj h2 {
   font-size: 1.3rem;
@@ -291,11 +329,43 @@ footer #insta {
 .work {
   margin-bottom: 5em;
 }
+@media (min-width: 570px) {
+  .work {
+    margin-bottom: 6.7em;
+  }
+}
+@media (min-width: 570px) {
+  .work .imgs-loader img {
+    width: 70%;
+  }
+}
+@media (min-width: 570px) {
+  .work .imgs-loader img:nth-child(1) {
+    align-self: flex-end;
+    transform: translateY(1.5em);
+  }
+}
+@media (min-width: 570px) {
+  .work .imgs-loader img:nth-child(2) {
+    align-self: flex-start;
+    transform: translateY(-1.5em);
+  }
+}
 
 .copyright {
   padding: 3em 0;
   text-align: center;
   font-weight: 300;
+}
+
+.what-i-do {
+  max-width: 470px;
+  margin: 0 auto;
+}
+@media (min-width: 570px) {
+  .what-i-do {
+    max-width: 550px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

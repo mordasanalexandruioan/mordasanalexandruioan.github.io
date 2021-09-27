@@ -1,3 +1,25 @@
 .work {
     margin-bottom: 5em;
+    @include mq('sm') {
+        margin-bottom: 6.7em;
+    }
+    & .imgs-loader {
+        & img {
+            @include mq('sm') {
+                width: 70%;
+            }
+        }
+        & img:nth-child(1) {
+            @include mq('sm') {
+                align-self: flex-end;
+                transform: translateY(1.5em);
+            }
+        }
+        & img:nth-child(2) {
+            @include mq('sm') {
+                align-self: flex-start;
+                transform: translateY(-1.5em);
+            }
+        }
+    }
 }
