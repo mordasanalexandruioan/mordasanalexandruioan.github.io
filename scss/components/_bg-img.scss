@@ -12,5 +12,10 @@
         @include mq('sm') {
             margin-right: 0;
         }
+        @include mq('med') {
+            width: 600px;
+            height: 720px;
+            margin-right: -2em;
+        }
     }
 }

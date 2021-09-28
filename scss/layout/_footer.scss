@@ -9,6 +9,9 @@ footer {
     }
     & h2 {
         font-size: 1.3rem;
+        @include mq('med') {
+            font-size: 1.63rem;
+        }
     }
     & p {
         color: rgb(139, 139, 139);
@@ -22,5 +25,13 @@ footer {
     #insta {
         color: #000;
         margin-top: 2.5em;
+    }
+    & .content {
+        @include mq('med') {
+            @include flexy($dir: row, $align: center);
+            ul {
+                padding-left: 1.6em;
+            }
+        }
     }
 }

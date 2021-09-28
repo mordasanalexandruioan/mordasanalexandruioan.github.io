@@ -1,5 +1,6 @@
 main {
     padding: 4em .6em 0;
+    overflow: hidden;
     & h3 {
         text-align: right;
         margin-top: 3em;
@@ -11,5 +12,6 @@ main {
     }
     & hr {
         margin: 4em 0;
+        border: solid 1px rgb(206, 206, 206);
     }
 }
