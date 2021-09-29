@@ -44,6 +44,24 @@ aside nav ul {
 }
 aside nav ul li {
   text-align: center;
+  padding: 0em 0.6em;
+  transition: all 0.4s ease-out;
+  border-radius: 0.7em;
+  margin: 0.5em 0;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+aside nav ul li:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease-out, background-color 0.7s ease-in-out;
+  transform: rotate(0deg) scale(0);
 }
 aside nav ul a {
   text-decoration: none;
@@ -51,13 +69,23 @@ aside nav ul a {
   text-transform: capitalize;
   font-size: 1.8rem;
   font-weight: 600;
-  line-height: 1.7;
+  line-height: 1;
+  transition: all 0.3s;
+  display: block;
 }
 @media (min-width: 570px) {
   aside nav ul a {
     font-size: 2.3rem;
     line-height: 1.8;
   }
+}
+aside nav ul li:hover:before {
+  background-color: red;
+  transform: rotateY(360deg) scale(1);
+}
+aside nav ul li:hover a {
+  color: #000;
+  transform: rotateY(360deg);
 }
 
 @keyframes menuOpen {
@@ -359,7 +387,7 @@ footer #insta {
   background-color: #000;
   line-height: 0;
   transform: rotate(0deg);
-  transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out 0.1s;
+  transition: transform 0.4s ease-in-out, background-color 0.4s, opacity 0.3s ease-in-out 0.1s;
   transform-origin: left;
 }
 .menu-click #menu i:nth-child(2) {
@@ -376,6 +404,7 @@ footer #insta {
 }
 .menu-click #menu.opened i:nth-child(1) {
   transform: rotate(40deg);
+  background-color: red;
 }
 .menu-click #menu.opened i:nth-child(3) {
   transform: rotate(-40deg);
