@@ -86,6 +86,10 @@ aside nav ul li:hover:before {
 aside nav ul li:hover a {
   color: #000;
   transform: rotateY(360deg);
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  font-size: 1.6rem;
+  padding: 0.2em 0;
 }
 
 @keyframes menuOpen {
@@ -277,37 +281,73 @@ footer #insta {
 }
 
 .content.about {
-  position: relative;
   display: flex;
   align-items: center;
   margin-top: 0.7em;
 }
 .content.about h2 {
   margin: 0;
-  color: rgba(117, 117, 117, 0.267);
-  font-size: 4rem;
-  position: absolute;
+  color: #2f2f2f;
+  font-size: 3.5rem;
+  transform: rotate(-90deg);
+  border-bottom: solid 3px red;
+  border-bottom-left-radius: 0.9em;
+  border-left: solid 3px transparent;
+}
+.content.about div {
+  min-width: 100px;
+  min-height: 170px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .content.about p {
   margin: 0;
   font-weight: 600;
   font-size: 1.1rem;
 }
+.content.about #div2 {
+  min-height: 250px;
+}
 
 .hobbies .imgs-loader {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 .hobbies .imgs-loader img {
-  width: 55%;
-}
-.hobbies .imgs-loader img:nth-child(1) {
-  align-self: flex-start;
+  width: 48.8%;
 }
 .hobbies .imgs-loader img:nth-child(3) {
-  align-self: flex-end;
+  width: 100%;
+}
+.hobbies .content.about {
+  flex-direction: row-reverse;
+}
+.hobbies .content.about #div2 {
+  transform: rotate(180deg);
+  min-width: 90px;
 }
 
+@keyframes hobbyIMG1 {
+  0%, 100% {
+    transform: translate(0%, 0%);
+  }
+  50% {
+    transform: translate(10%, 5%);
+  }
+}
+@keyframes hobbyIMG2 {
+  0%, 100% {
+    transform: translate(0%, 0%);
+  }
+  50% {
+    transform: translate(30%, -10%);
+  }
+}
 .imgs-loader {
   display: flex;
   flex-direction: row;

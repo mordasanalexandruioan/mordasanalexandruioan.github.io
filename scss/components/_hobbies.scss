@@ -1,14 +1,38 @@
 .hobbies {
     & .imgs-loader {
-        @include flexy($dir: column);
+        @include flexy($dir: row, $align: center, $just: center, $wrap: wrap);
         img {
-            width: 55%;
-        }
-        img:nth-child(1) {
-            align-self: flex-start;
+            width: 48.8%;
         }
         img:nth-child(3) {
-            align-self: flex-end;
+            width: 100%;
         }
+    }
+    & .content.about {
+        flex-direction: row-reverse;
+        #div2 {
+            transform: rotate(180deg);
+            min-width: 90px;
+        }
+    }
+}
+
+@keyframes hobbyIMG1 {
+    0%,
+    100% {
+        transform: translate(0%, 0%);
+    }
+    50% {
+        transform: translate(10%, 5%);
+    }
+}
+
+@keyframes hobbyIMG2 {
+    0%,
+    100% {
+        transform: translate(0%, 0%);
+    }
+    50% {
+        transform: translate(30%, -10%);
     }
 }

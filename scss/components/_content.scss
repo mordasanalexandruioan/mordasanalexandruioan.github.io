@@ -1,16 +1,27 @@
 .content.about {
-    position: relative;
     @include flexy($align: center);
     margin-top: .7em;
     & h2 {
         margin: 0;
-        color: rgba(117, 117, 117, 0.267);
-        font-size: 4rem;
-        position: absolute;
+        color: rgb(47, 47, 47);
+        font-size: 3.5rem;
+        transform: rotate(-90deg);
+        border-bottom: solid 3px red;
+        border-bottom-left-radius: .9em;
+        border-left: solid 3px transparent;
+    }
+    & div {
+        min-width: 100px;
+        min-height: 170px;
+        overflow: hidden;
+        @include flexy($align: center, $just: center);
     }
     & p {
         margin: 0;
         font-weight: 600;
         font-size: 1.1rem;
+    }
+    & #div2 {
+        min-height: 250px;
     }
 }
