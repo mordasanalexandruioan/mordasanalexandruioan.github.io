@@ -1,10 +1,7 @@
 .hobbies {
     & .imgs-loader {
-        @include flexy($dir: row, $align: center, $just: center, $wrap: wrap);
+        @include gridy($col: 1fr 1fr, $rows: auto, $gap: 1px, $area: "drum race" "mbike mbike");
         img {
-            width: 48.8%;
-        }
-        img:nth-child(3) {
             width: 100%;
         }
     }
@@ -14,6 +11,42 @@
             transform: rotate(180deg);
             min-width: 90px;
         }
+    }
+    & #drum {
+        grid-area: drum;
+        animation: opacityAnim 1.2s linear;
+    }
+    & #race {
+        grid-area: race;
+        animation: opacityAnim 1.2s linear .2s;
+    }
+    & #mbike {
+        grid-area: mbike;
+        animation: opacityAnim 1.2s linear .4s;
+    }
+    & #drum.change1 {
+        grid-area: race;
+        animation: opacityAnim 1.2s linear;
+    }
+    & #race.change1 {
+        grid-area: mbike;
+        animation: opacityAnim 1.2s linear .2s;
+    }
+    & #mbike.change1 {
+        grid-area: drum;
+        animation: opacityAnim 1.2s linear .4s;
+    }
+    & #drum.change2 {
+        grid-area: mbike;
+        animation: opacityAnim 1.2s linear;
+    }
+    & #race.change2 {
+        grid-area: drum;
+        animation: opacityAnim 1.2s linear .2s;
+    }
+    & #mbike.change2 {
+        grid-area: race;
+        animation: opacityAnim 1.2s linear .4s;
     }
 }
 
@@ -34,5 +67,14 @@
     }
     50% {
         transform: translate(30%, -10%);
+    }
+}
+
+@keyframes opacityAnim {
+    to {
+        opacity: 1;
+    }
+    from {
+        opacity: 0;
     }
 }

@@ -72,6 +72,7 @@ aside nav ul a {
   line-height: 1;
   transition: all 0.3s;
   display: block;
+  padding: 0.15em 0;
 }
 @media (min-width: 570px) {
   aside nav ul a {
@@ -312,16 +313,13 @@ footer #insta {
 }
 
 .hobbies .imgs-loader {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "drum race" "mbike mbike";
+  grid-gap: 1px;
 }
 .hobbies .imgs-loader img {
-  width: 48.8%;
-}
-.hobbies .imgs-loader img:nth-child(3) {
   width: 100%;
 }
 .hobbies .content.about {
@@ -330,6 +328,42 @@ footer #insta {
 .hobbies .content.about #div2 {
   transform: rotate(180deg);
   min-width: 90px;
+}
+.hobbies #drum {
+  grid-area: drum;
+  animation: opacityAnim 1.2s linear;
+}
+.hobbies #race {
+  grid-area: race;
+  animation: opacityAnim 1.2s linear 0.2s;
+}
+.hobbies #mbike {
+  grid-area: mbike;
+  animation: opacityAnim 1.2s linear 0.4s;
+}
+.hobbies #drum.change1 {
+  grid-area: race;
+  animation: opacityAnim 1.2s linear;
+}
+.hobbies #race.change1 {
+  grid-area: mbike;
+  animation: opacityAnim 1.2s linear 0.2s;
+}
+.hobbies #mbike.change1 {
+  grid-area: drum;
+  animation: opacityAnim 1.2s linear 0.4s;
+}
+.hobbies #drum.change2 {
+  grid-area: mbike;
+  animation: opacityAnim 1.2s linear;
+}
+.hobbies #race.change2 {
+  grid-area: drum;
+  animation: opacityAnim 1.2s linear 0.2s;
+}
+.hobbies #mbike.change2 {
+  grid-area: race;
+  animation: opacityAnim 1.2s linear 0.4s;
 }
 
 @keyframes hobbyIMG1 {
@@ -346,6 +380,14 @@ footer #insta {
   }
   50% {
     transform: translate(30%, -10%);
+  }
+}
+@keyframes opacityAnim {
+  to {
+    opacity: 1;
+  }
+  from {
+    opacity: 0;
   }
 }
 .imgs-loader {

@@ -41,6 +41,7 @@ aside {
             line-height: 1;
             transition: all .3s;
             display: block;
+            padding: .15em 0;
             @include mq('sm') {
                 font-size: 2.3rem;
                 line-height: 1.8;

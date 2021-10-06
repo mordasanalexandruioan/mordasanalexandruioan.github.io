@@ -10,7 +10,7 @@
     display: grid;
     grid-template-columns: $col;
     grid-template-rows: $rows;
-    grid-area: $area;
+    grid-template-areas: $area;
     grid-gap: $gap;
 }
 

@@ -32,18 +32,48 @@ let eventMenuClick = e => {
 let animateHobbies = () => {
     let hobbiesIMGLoader = document.querySelector('.hobbies').children[0];
 
-    let img1 = hobbiesIMGLoader.children[0]
-    let img2 = hobbiesIMGLoader.children[1];
-    let img3 = hobbiesIMGLoader.children[2];
+    let img1 = document.querySelector('#drum');
+    let img2 = document.querySelector('#race');
+    let img3 = document.querySelector('#mbike');
 
-    function anima1() {
-        hobbiesIMGLoader.insertBefore(img1.nextElementSibling, img2.previousElementSibling);
 
-        setInterval(hobbiesIMGLoader.insertBefore(img1.nextElementSibling, img3.previousElementSibling), 2000);
+    function anim1() {
+        img1.classList.add("change1");
+        img2.classList.add("change1");
+        img3.classList.add("change1");
     }
 
+    function anim2() {
+        img1.classList.remove("change1");
+        img1.classList.add("change2");
 
+        img2.classList.remove("change1");
+        img2.classList.add("change2");
 
+        img3.classList.remove("change1");
+        img3.classList.add("change2");
+    }
+
+    function anim3() {
+        img1.classList.remove("change2");
+
+        img2.classList.remove("change2");
+
+        img3.classList.remove("change2");
+    }
+
+    function animate() {
+        anim1();
+        setTimeout(anim1, 4000);
+
+        anim2();
+        setTimeout(anim2, 6000);
+
+        anim3();
+        setTimeout(anim3, 8000);
+    }
+
+    setInterval(animate, 8001);
 
 
 
