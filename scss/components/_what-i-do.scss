@@ -4,4 +4,11 @@
     @include mq('sm') {
         max-width: 550px;
     }
+    @include mq('med') {
+        max-width: 650px;
+    }
+    @include mq('lg') {
+        width: 100%;
+        max-width: none;
+    }
 }

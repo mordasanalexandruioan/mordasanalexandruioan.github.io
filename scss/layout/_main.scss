@@ -9,6 +9,10 @@ main {
         text-transform: uppercase;
         font-size: .92rem;
         letter-spacing: .2em;
+        @include mq('lg') {
+            text-align: left;
+            font-size: 1.2rem;
+        }
     }
     & hr {
         margin: 4em 0;

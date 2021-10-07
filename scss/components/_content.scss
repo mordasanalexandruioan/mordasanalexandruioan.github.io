@@ -1,6 +1,9 @@
 .content.about {
     @include flexy($align: center);
     margin-top: .7em;
+    @include mq('lg') {
+        width: 50%;
+    }
     & h2 {
         margin: 0;
         color: rgb(47, 47, 47);
@@ -9,19 +12,43 @@
         border-bottom: solid 3px red;
         border-bottom-left-radius: .9em;
         border-left: solid 3px transparent;
+        @include mq('med') {
+            font-size: 4rem;
+        }
+        @include mq('lg') {
+            font-size: 5rem;
+        }
     }
     & div {
         min-width: 100px;
         min-height: 170px;
         overflow: hidden;
         @include flexy($align: center, $just: center);
+        @include mq('med') {
+            min-width: 130px;
+            min-height: 170px;
+        }
+        @include mq('lg') {
+            min-width: 130px;
+            min-height: 230px;
+        }
     }
     & p {
         margin: 0;
         font-weight: 600;
         font-size: 1.1rem;
+        @include mq('med') {
+            font-size: 1.3rem;
+        }
     }
     & #div2 {
         min-height: 250px;
+        @include mq('med') {
+            min-height: 270px;
+        }
+        @include mq('med') {
+            min-height: 400px;
+            overflow: visible;
+        }
     }
 }

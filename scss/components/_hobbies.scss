@@ -1,8 +1,15 @@
 .hobbies {
+    @include mq('lg') {
+        @include flexy($dir: row, $align: center);
+    }
     & .imgs-loader {
         @include gridy($col: 1fr 1fr, $rows: auto, $gap: 1px, $area: "drum race" "mbike mbike");
         img {
             width: 100%;
+            transform: scale(0);
+        }
+        @include mq('lg') {
+            width: 40%;
         }
     }
     & .content.about {
@@ -11,42 +18,46 @@
             transform: rotate(180deg);
             min-width: 90px;
         }
+        @include mq('lg') {
+            width: 60%;
+            margin-left: 1em;
+        }
     }
     & #drum {
         grid-area: drum;
-        animation: opacityAnim 1.2s linear;
+        animation: opacityAnim1 1.2s forwards;
     }
     & #race {
         grid-area: race;
-        animation: opacityAnim 1.2s linear .2s;
+        animation: opacityAnim1 1.2s forwards .4s;
     }
     & #mbike {
         grid-area: mbike;
-        animation: opacityAnim 1.2s linear .4s;
+        animation: opacityAnim2 1.2s forwards .8s;
     }
     & #drum.change1 {
         grid-area: race;
-        animation: opacityAnim 1.2s linear;
+        animation: opacityAnim2 1.2s forwards;
     }
     & #race.change1 {
         grid-area: mbike;
-        animation: opacityAnim 1.2s linear .2s;
+        animation: opacityAnim2 1.2s forwards .4s;
     }
     & #mbike.change1 {
         grid-area: drum;
-        animation: opacityAnim 1.2s linear .4s;
+        animation: opacityAnim2 1.2s forwards .8s;
     }
     & #drum.change2 {
         grid-area: mbike;
-        animation: opacityAnim 1.2s linear;
+        animation: opacityAnim3 1.2s forwards;
     }
     & #race.change2 {
         grid-area: drum;
-        animation: opacityAnim 1.2s linear .2s;
+        animation: opacityAnim3 1.2s forwards .4s;
     }
     & #mbike.change2 {
         grid-area: race;
-        animation: opacityAnim 1.2s linear .4s;
+        animation: opacityAnim3 1.2s forwards .8s;
     }
 }
 
@@ -70,11 +81,29 @@
     }
 }
 
-@keyframes opacityAnim {
+@keyframes opacityAnim1 {
     to {
-        opacity: 1;
+        transform: scale(1);
     }
     from {
-        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+@keyframes opacityAnim2 {
+    to {
+        transform: scale(1);
+    }
+    from {
+        transform: scale(0);
+    }
+}
+
+@keyframes opacityAnim3 {
+    to {
+        transform: scale(1);
+    }
+    from {
+        transform: scale(0);
     }
 }

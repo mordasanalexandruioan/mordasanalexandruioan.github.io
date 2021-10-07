@@ -64,16 +64,16 @@ let animateHobbies = () => {
 
     function animate() {
         anim1();
-        setTimeout(anim1, 4000);
+        setTimeout(anim1, 12000);
 
         anim2();
-        setTimeout(anim2, 6000);
+        setTimeout(anim2, 8000);
 
         anim3();
-        setTimeout(anim3, 8000);
+        setTimeout(anim3, 4000);
     }
 
-    setInterval(animate, 8001);
+    setInterval(animate, 12000);
 
 
 

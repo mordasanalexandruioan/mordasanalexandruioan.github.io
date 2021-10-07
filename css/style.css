@@ -130,6 +130,12 @@ main h3 {
   font-size: 0.92rem;
   letter-spacing: 0.2em;
 }
+@media (min-width: 1024px) {
+  main h3 {
+    text-align: left;
+    font-size: 1.2rem;
+  }
+}
 main hr {
   margin: 4em 0;
   border: solid 1px #cecece;
@@ -286,6 +292,11 @@ footer #insta {
   align-items: center;
   margin-top: 0.7em;
 }
+@media (min-width: 1024px) {
+  .content.about {
+    width: 50%;
+  }
+}
 .content.about h2 {
   margin: 0;
   color: #2f2f2f;
@@ -295,6 +306,16 @@ footer #insta {
   border-bottom-left-radius: 0.9em;
   border-left: solid 3px transparent;
 }
+@media (min-width: 724px) {
+  .content.about h2 {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 1024px) {
+  .content.about h2 {
+    font-size: 5rem;
+  }
+}
 .content.about div {
   min-width: 100px;
   min-height: 170px;
@@ -303,15 +324,50 @@ footer #insta {
   justify-content: center;
   align-items: center;
 }
+@media (min-width: 724px) {
+  .content.about div {
+    min-width: 130px;
+    min-height: 170px;
+  }
+}
+@media (min-width: 1024px) {
+  .content.about div {
+    min-width: 130px;
+    min-height: 230px;
+  }
+}
 .content.about p {
   margin: 0;
   font-weight: 600;
   font-size: 1.1rem;
 }
+@media (min-width: 724px) {
+  .content.about p {
+    font-size: 1.3rem;
+  }
+}
 .content.about #div2 {
   min-height: 250px;
 }
+@media (min-width: 724px) {
+  .content.about #div2 {
+    min-height: 270px;
+  }
+}
+@media (min-width: 724px) {
+  .content.about #div2 {
+    min-height: 400px;
+    overflow: visible;
+  }
+}
 
+@media (min-width: 1024px) {
+  .hobbies {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
 .hobbies .imgs-loader {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -321,6 +377,12 @@ footer #insta {
 }
 .hobbies .imgs-loader img {
   width: 100%;
+  transform: scale(0);
+}
+@media (min-width: 1024px) {
+  .hobbies .imgs-loader {
+    width: 40%;
+  }
 }
 .hobbies .content.about {
   flex-direction: row-reverse;
@@ -329,41 +391,47 @@ footer #insta {
   transform: rotate(180deg);
   min-width: 90px;
 }
+@media (min-width: 1024px) {
+  .hobbies .content.about {
+    width: 60%;
+    margin-left: 1em;
+  }
+}
 .hobbies #drum {
   grid-area: drum;
-  animation: opacityAnim 1.2s linear;
+  animation: opacityAnim1 1.2s forwards;
 }
 .hobbies #race {
   grid-area: race;
-  animation: opacityAnim 1.2s linear 0.2s;
+  animation: opacityAnim1 1.2s forwards 0.4s;
 }
 .hobbies #mbike {
   grid-area: mbike;
-  animation: opacityAnim 1.2s linear 0.4s;
+  animation: opacityAnim2 1.2s forwards 0.8s;
 }
 .hobbies #drum.change1 {
   grid-area: race;
-  animation: opacityAnim 1.2s linear;
+  animation: opacityAnim2 1.2s forwards;
 }
 .hobbies #race.change1 {
   grid-area: mbike;
-  animation: opacityAnim 1.2s linear 0.2s;
+  animation: opacityAnim2 1.2s forwards 0.4s;
 }
 .hobbies #mbike.change1 {
   grid-area: drum;
-  animation: opacityAnim 1.2s linear 0.4s;
+  animation: opacityAnim2 1.2s forwards 0.8s;
 }
 .hobbies #drum.change2 {
   grid-area: mbike;
-  animation: opacityAnim 1.2s linear;
+  animation: opacityAnim3 1.2s forwards;
 }
 .hobbies #race.change2 {
   grid-area: drum;
-  animation: opacityAnim 1.2s linear 0.2s;
+  animation: opacityAnim3 1.2s forwards 0.4s;
 }
 .hobbies #mbike.change2 {
   grid-area: race;
-  animation: opacityAnim 1.2s linear 0.4s;
+  animation: opacityAnim3 1.2s forwards 0.8s;
 }
 
 @keyframes hobbyIMG1 {
@@ -382,12 +450,28 @@ footer #insta {
     transform: translate(30%, -10%);
   }
 }
-@keyframes opacityAnim {
+@keyframes opacityAnim1 {
   to {
-    opacity: 1;
+    transform: scale(1);
   }
   from {
-    opacity: 0;
+    transform: scale(0);
+  }
+}
+@keyframes opacityAnim2 {
+  to {
+    transform: scale(1);
+  }
+  from {
+    transform: scale(0);
+  }
+}
+@keyframes opacityAnim3 {
+  to {
+    transform: scale(1);
+  }
+  from {
+    transform: scale(0);
   }
 }
 .imgs-loader {
@@ -422,6 +506,11 @@ footer #insta {
   .list {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+}
+@media (min-width: 1024px) {
+  .list {
+    justify-content: flex-start;
   }
 }
 
@@ -550,9 +639,19 @@ footer #insta {
   font-size: 1.8rem;
   margin-bottom: 2em;
 }
+@media (min-width: 724px) {
+  .projects #title-prj {
+    font-size: 2.3rem;
+  }
+}
 .projects #title-prj span {
   font-size: 1.1rem;
   color: #e70808;
+}
+@media (min-width: 724px) {
+  .projects #title-prj span {
+    font-size: 1.4rem;
+  }
 }
 
 .work {
@@ -561,6 +660,18 @@ footer #insta {
 @media (min-width: 570px) {
   .work {
     margin-bottom: 6.7em;
+  }
+}
+@media (min-width: 1024px) {
+  .work {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+}
+@media (min-width: 1024px) {
+  .work .imgs-loader {
+    width: 50%;
   }
 }
 .work .imgs-loader img {
@@ -577,10 +688,21 @@ footer #insta {
     transform: translateY(1.5em);
   }
 }
+@media (min-width: 1024px) {
+  .work .imgs-loader img:nth-child(1) {
+    align-self: center;
+  }
+}
 @media (min-width: 570px) {
   .work .imgs-loader img:nth-child(2) {
     align-self: flex-start;
     transform: translateY(-1.5em);
+  }
+}
+@media (min-width: 1024px) {
+  .work .imgs-loader img:nth-child(2) {
+    align-self: center;
+    transform: translate(1.5em, -1.5em);
   }
 }
 
@@ -602,6 +724,17 @@ footer #insta {
 @media (min-width: 570px) {
   .what-i-do {
     max-width: 550px;
+  }
+}
+@media (min-width: 724px) {
+  .what-i-do {
+    max-width: 650px;
+  }
+}
+@media (min-width: 1024px) {
+  .what-i-do {
+    width: 100%;
+    max-width: none;
   }
 }
 

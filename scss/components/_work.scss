@@ -3,7 +3,13 @@
     @include mq('sm') {
         margin-bottom: 6.7em;
     }
+    @include mq('lg') {
+        @include flexy($dir: row-reverse, $align: center);
+    }
     & .imgs-loader {
+        @include mq('lg') {
+            width: 50%;
+        }
         & img {
             @include mq('sm') {
                 width: 70%;
@@ -15,11 +21,18 @@
                 align-self: flex-end;
                 transform: translateY(1.5em);
             }
+            @include mq('lg') {
+                align-self: center;
+            }
         }
         & img:nth-child(2) {
             @include mq('sm') {
                 align-self: flex-start;
                 transform: translateY(-1.5em);
+            }
+            @include mq('lg') {
+                align-self: center;
+                transform: translate(1.5em, -1.5em);
             }
         }
     }

@@ -5,4 +5,7 @@
         flex-direction: row;
         flex-wrap: wrap;
     }
+    @include mq('lg') {
+        justify-content: flex-start;
+    }
 }
