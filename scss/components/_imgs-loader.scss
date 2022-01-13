@@ -1,15 +1,32 @@
 .imgs-loader {
-    @include flexy($dir: row, $align: center, $just: center);
-    @include mq('sm') {
-        flex-direction: column;
-    }
     overflow: hidden;
+    position: absolute;
+    @include mq('lg') {
+        width: 50%;
+    }
     & img {
-        width: 100%;
-        min-width: 150px;
-        height: 100%;
-        z-index: -1;
-        right: 0;
-        margin: .2em;
+        width: 90%;
+        margin: 0;
+        @include mq('sm') {
+            width: 70%;
+        }
+        clip-path: none;
+    }
+    & img:nth-child(1) {
+        float: left;
+        transform: translateY(1.5em);
+        @include mq('sm') {
+            transform: translateY(1.5em);
+        }
+        @include mq('lg') {}
+    }
+    & img:nth-child(2) {
+        float: right;
+        @include mq('sm') {
+            transform: translateY(-1.5em);
+        }
+        @include mq('lg') {
+            transform: translate(1.5em, -1.5em);
+        }
     }
 }

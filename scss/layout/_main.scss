@@ -1,5 +1,5 @@
 main {
-    padding: 4em .6em 0;
+    padding: 4em 0 0;
     overflow: hidden;
     & h3 {
         text-align: right;
@@ -17,5 +17,8 @@ main {
     & hr {
         margin: 4em 0;
         border: solid 1px rgb(206, 206, 206);
+    }
+    & article {
+        max-width: 1030px;
     }
 }

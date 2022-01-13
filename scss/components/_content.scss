@@ -1,17 +1,20 @@
 .content.about {
-    @include flexy($align: center);
+    width: 70%;
+    padding-left: .6em;
+    @include flexy($dir: column, $align: flex-start);
     margin-top: .7em;
     @include mq('lg') {
         width: 50%;
     }
     & h2 {
-        margin: 0;
+        margin: 0 0 .1em 0;
+        padding: 0 .1em;
+        z-index: 1;
         color: rgb(47, 47, 47);
         font-size: 3.5rem;
-        transform: rotate(-90deg);
-        border-bottom: solid 3px red;
-        border-bottom-left-radius: .9em;
-        border-left: solid 3px transparent;
+        backdrop-filter: blur(2px);
+        background-color: rgba(255, 255, 255, 0.356);
+        border-radius: .3em;
         @include mq('med') {
             font-size: 4rem;
         }
@@ -19,36 +22,17 @@
             font-size: 5rem;
         }
     }
-    & div {
-        min-width: 100px;
-        min-height: 170px;
-        overflow: hidden;
-        @include flexy($align: center, $just: center);
-        @include mq('med') {
-            min-width: 130px;
-            min-height: 170px;
-        }
-        @include mq('lg') {
-            min-width: 130px;
-            min-height: 230px;
-        }
-    }
     & p {
         margin: 0;
+        padding: .2em .3em;
+        z-index: 1;
         font-weight: 600;
-        font-size: 1.1rem;
+        font-size: 1.23rem;
+        backdrop-filter: blur(2px);
+        background-color: rgba(255, 255, 255, 0.356);
+        border-radius: .3em;
         @include mq('med') {
             font-size: 1.3rem;
-        }
-    }
-    & #div2 {
-        min-height: 250px;
-        @include mq('med') {
-            min-height: 270px;
-        }
-        @include mq('med') {
-            min-height: 400px;
-            overflow: visible;
         }
     }
 }

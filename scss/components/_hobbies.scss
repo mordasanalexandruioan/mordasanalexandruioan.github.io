@@ -1,6 +1,7 @@
 .hobbies {
     @include mq('lg') {
         @include flexy($dir: row, $align: center);
+        margin-left: auto;
     }
     & .imgs-loader {
         @include gridy($col: 1fr 1fr, $rows: auto, $gap: 1px, $area: "drum race" "mbike mbike");

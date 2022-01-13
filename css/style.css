@@ -118,7 +118,7 @@ aside.opened {
 }
 
 main {
-  padding: 4em 0.6em 0;
+  padding: 4em 0 0;
   overflow: hidden;
 }
 main h3 {
@@ -139,6 +139,9 @@ main h3 {
 main hr {
   margin: 4em 0;
   border: solid 1px #cecece;
+}
+main article {
+  max-width: 1030px;
 }
 
 footer {
@@ -233,6 +236,11 @@ footer #insta {
     line-height: 1;
   }
 }
+@media (min-width: 1024px) {
+  .home-top .content h1 {
+    max-width: 817px;
+  }
+}
 .home-top .content span {
   color: #8b8b8b;
   backdrop-filter: blur(2px);
@@ -288,8 +296,11 @@ footer #insta {
 }
 
 .content.about {
+  width: 70%;
+  padding-left: 0.6em;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   margin-top: 0.7em;
 }
 @media (min-width: 1024px) {
@@ -298,13 +309,14 @@ footer #insta {
   }
 }
 .content.about h2 {
-  margin: 0;
+  margin: 0 0 0.1em 0;
+  padding: 0 0.1em;
+  z-index: 1;
   color: #2f2f2f;
   font-size: 3.5rem;
-  transform: rotate(-90deg);
-  border-bottom: solid 3px red;
-  border-bottom-left-radius: 0.9em;
-  border-left: solid 3px transparent;
+  backdrop-filter: blur(2px);
+  background-color: rgba(255, 255, 255, 0.356);
+  border-radius: 0.3em;
 }
 @media (min-width: 724px) {
   .content.about h2 {
@@ -316,48 +328,19 @@ footer #insta {
     font-size: 5rem;
   }
 }
-.content.about div {
-  min-width: 100px;
-  min-height: 170px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-@media (min-width: 724px) {
-  .content.about div {
-    min-width: 130px;
-    min-height: 170px;
-  }
-}
-@media (min-width: 1024px) {
-  .content.about div {
-    min-width: 130px;
-    min-height: 230px;
-  }
-}
 .content.about p {
   margin: 0;
+  padding: 0.2em 0.3em;
+  z-index: 1;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1.23rem;
+  backdrop-filter: blur(2px);
+  background-color: rgba(255, 255, 255, 0.356);
+  border-radius: 0.3em;
 }
 @media (min-width: 724px) {
   .content.about p {
     font-size: 1.3rem;
-  }
-}
-.content.about #div2 {
-  min-height: 250px;
-}
-@media (min-width: 724px) {
-  .content.about #div2 {
-    min-height: 270px;
-  }
-}
-@media (min-width: 724px) {
-  .content.about #div2 {
-    min-height: 400px;
-    overflow: visible;
   }
 }
 
@@ -366,6 +349,7 @@ footer #insta {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-left: auto;
   }
 }
 .hobbies .imgs-loader {
@@ -475,24 +459,45 @@ footer #insta {
   }
 }
 .imgs-loader {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
+  position: absolute;
 }
-@media (min-width: 570px) {
+@media (min-width: 1024px) {
   .imgs-loader {
-    flex-direction: column;
+    width: 50%;
   }
 }
 .imgs-loader img {
-  width: 100%;
-  min-width: 150px;
-  height: 100%;
-  z-index: -1;
-  right: 0;
-  margin: 0.2em;
+  width: 90%;
+  margin: 0;
+  clip-path: none;
+}
+@media (min-width: 570px) {
+  .imgs-loader img {
+    width: 70%;
+  }
+}
+.imgs-loader img:nth-child(1) {
+  float: left;
+  transform: translateY(1.5em);
+}
+@media (min-width: 570px) {
+  .imgs-loader img:nth-child(1) {
+    transform: translateY(1.5em);
+  }
+}
+.imgs-loader img:nth-child(2) {
+  float: right;
+}
+@media (min-width: 570px) {
+  .imgs-loader img:nth-child(2) {
+    transform: translateY(-1.5em);
+  }
+}
+@media (min-width: 1024px) {
+  .imgs-loader img:nth-child(2) {
+    transform: translate(1.5em, -1.5em);
+  }
 }
 
 .list {
@@ -656,6 +661,7 @@ footer #insta {
 
 .work {
   margin-bottom: 5em;
+  position: relative;
 }
 @media (min-width: 570px) {
   .work {
@@ -667,42 +673,7 @@ footer #insta {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-  }
-}
-@media (min-width: 1024px) {
-  .work .imgs-loader {
-    width: 50%;
-  }
-}
-.work .imgs-loader img {
-  clip-path: none;
-}
-@media (min-width: 570px) {
-  .work .imgs-loader img {
-    width: 70%;
-  }
-}
-@media (min-width: 570px) {
-  .work .imgs-loader img:nth-child(1) {
-    align-self: flex-end;
-    transform: translateY(1.5em);
-  }
-}
-@media (min-width: 1024px) {
-  .work .imgs-loader img:nth-child(1) {
-    align-self: center;
-  }
-}
-@media (min-width: 570px) {
-  .work .imgs-loader img:nth-child(2) {
-    align-self: flex-start;
-    transform: translateY(-1.5em);
-  }
-}
-@media (min-width: 1024px) {
-  .work .imgs-loader img:nth-child(2) {
-    align-self: center;
-    transform: translate(1.5em, -1.5em);
+    margin-right: auto;
   }
 }
 
