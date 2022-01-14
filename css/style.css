@@ -123,11 +123,12 @@ main {
 }
 main h3 {
   text-align: right;
-  margin-top: 3em;
+  margin: 6em 0 0 0;
+  padding: 0 0.4em 0 0;
   color: #8b8b8b;
   font-weight: 300;
   text-transform: uppercase;
-  font-size: 0.92rem;
+  font-size: 1rem;
   letter-spacing: 0.2em;
 }
 @media (min-width: 1024px) {
@@ -297,11 +298,12 @@ footer #insta {
 
 .content.about {
   width: 70%;
-  padding-left: 0.6em;
+  padding: 0 0 0 0.5em;
+  position: absolute;
+  top: 2.7em;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 0.7em;
 }
 @media (min-width: 1024px) {
   .content.about {
@@ -312,7 +314,7 @@ footer #insta {
   margin: 0 0 0.1em 0;
   padding: 0 0.1em;
   z-index: 1;
-  color: #2f2f2f;
+  color: #d10909;
   font-size: 3.5rem;
   backdrop-filter: blur(2px);
   background-color: rgba(255, 255, 255, 0.356);
@@ -344,123 +346,67 @@ footer #insta {
   }
 }
 
-@media (min-width: 1024px) {
-  .hobbies {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-left: auto;
-  }
+.hobbies {
+  margin: 5em 0 5em 0;
+  min-height: 450px;
+  background-color: #161616;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.hobbies .imgs-loader {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  grid-template-areas: "drum race" "mbike mbike";
-  grid-gap: 1px;
-}
-.hobbies .imgs-loader img {
+.hobbies .content.details {
+  padding-right: 0.6em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   width: 100%;
-  transform: scale(0);
 }
 @media (min-width: 1024px) {
-  .hobbies .imgs-loader {
-    width: 40%;
-  }
-}
-.hobbies .content.about {
-  flex-direction: row-reverse;
-}
-.hobbies .content.about #div2 {
-  transform: rotate(180deg);
-  min-width: 90px;
-}
-@media (min-width: 1024px) {
-  .hobbies .content.about {
+  .hobbies .content.details {
     width: 60%;
     margin-left: 1em;
   }
 }
-.hobbies #drum {
-  grid-area: drum;
-  animation: opacityAnim1 1.2s forwards;
+.hobbies .content.details h2 {
+  margin: 0 0 0.1em 0;
+  padding: 0 0.1em;
+  z-index: 1;
+  color: #d10909;
+  font-size: 3.5rem;
+  backdrop-filter: blur(2px);
+  background-color: rgba(255, 255, 255, 0.89);
+  border-radius: 0.3em;
 }
-.hobbies #race {
-  grid-area: race;
-  animation: opacityAnim1 1.2s forwards 0.4s;
+@media (min-width: 724px) {
+  .hobbies .content.details h2 {
+    font-size: 4rem;
+  }
 }
-.hobbies #mbike {
-  grid-area: mbike;
-  animation: opacityAnim2 1.2s forwards 0.8s;
+@media (min-width: 1024px) {
+  .hobbies .content.details h2 {
+    font-size: 5rem;
+  }
 }
-.hobbies #drum.change1 {
-  grid-area: race;
-  animation: opacityAnim2 1.2s forwards;
+.hobbies .content.details p {
+  width: 70%;
+  margin: 0;
+  padding: 0.2em 0.3em;
+  z-index: 1;
+  font-weight: 600;
+  font-size: 1.23rem;
+  backdrop-filter: blur(2px);
+  background-color: rgba(255, 255, 255, 0.89);
+  border-radius: 0.3em;
 }
-.hobbies #race.change1 {
-  grid-area: mbike;
-  animation: opacityAnim2 1.2s forwards 0.4s;
-}
-.hobbies #mbike.change1 {
-  grid-area: drum;
-  animation: opacityAnim2 1.2s forwards 0.8s;
-}
-.hobbies #drum.change2 {
-  grid-area: mbike;
-  animation: opacityAnim3 1.2s forwards;
-}
-.hobbies #race.change2 {
-  grid-area: drum;
-  animation: opacityAnim3 1.2s forwards 0.4s;
-}
-.hobbies #mbike.change2 {
-  grid-area: race;
-  animation: opacityAnim3 1.2s forwards 0.8s;
+@media (min-width: 724px) {
+  .hobbies .content.details p {
+    font-size: 1.3rem;
+  }
 }
 
-@keyframes hobbyIMG1 {
-  0%, 100% {
-    transform: translate(0%, 0%);
-  }
-  50% {
-    transform: translate(10%, 5%);
-  }
-}
-@keyframes hobbyIMG2 {
-  0%, 100% {
-    transform: translate(0%, 0%);
-  }
-  50% {
-    transform: translate(30%, -10%);
-  }
-}
-@keyframes opacityAnim1 {
-  to {
-    transform: scale(1);
-  }
-  from {
-    transform: scale(0);
-  }
-}
-@keyframes opacityAnim2 {
-  to {
-    transform: scale(1);
-  }
-  from {
-    transform: scale(0);
-  }
-}
-@keyframes opacityAnim3 {
-  to {
-    transform: scale(1);
-  }
-  from {
-    transform: scale(0);
-  }
-}
 .imgs-loader {
   overflow: hidden;
-  position: absolute;
 }
 @media (min-width: 1024px) {
   .imgs-loader {
@@ -470,7 +416,6 @@ footer #insta {
 .imgs-loader img {
   width: 90%;
   margin: 0;
-  clip-path: none;
 }
 @media (min-width: 570px) {
   .imgs-loader img {
@@ -479,7 +424,7 @@ footer #insta {
 }
 .imgs-loader img:nth-child(1) {
   float: left;
-  transform: translateY(1.5em);
+  transform: translateY(1em);
 }
 @media (min-width: 570px) {
   .imgs-loader img:nth-child(1) {
@@ -488,6 +433,7 @@ footer #insta {
 }
 .imgs-loader img:nth-child(2) {
   float: right;
+  transform: translateY(-1em);
 }
 @media (min-width: 570px) {
   .imgs-loader img:nth-child(2) {
@@ -660,7 +606,7 @@ footer #insta {
 }
 
 .work {
-  margin-bottom: 5em;
+  margin-bottom: 15em;
   position: relative;
 }
 @media (min-width: 570px) {

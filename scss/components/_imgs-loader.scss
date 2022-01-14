@@ -1,6 +1,5 @@
 .imgs-loader {
     overflow: hidden;
-    position: absolute;
     @include mq('lg') {
         width: 50%;
     }
@@ -10,11 +9,10 @@
         @include mq('sm') {
             width: 70%;
         }
-        clip-path: none;
     }
     & img:nth-child(1) {
         float: left;
-        transform: translateY(1.5em);
+        transform: translateY(1em);
         @include mq('sm') {
             transform: translateY(1.5em);
         }
@@ -22,6 +20,7 @@
     }
     & img:nth-child(2) {
         float: right;
+        transform: translateY(-1em);
         @include mq('sm') {
             transform: translateY(-1.5em);
         }

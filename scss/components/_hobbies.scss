@@ -1,110 +1,45 @@
 .hobbies {
-    @include mq('lg') {
-        @include flexy($dir: row, $align: center);
-        margin-left: auto;
-    }
-    & .imgs-loader {
-        @include gridy($col: 1fr 1fr, $rows: auto, $gap: 1px, $area: "drum race" "mbike mbike");
-        img {
-            width: 100%;
-            transform: scale(0);
-        }
-        @include mq('lg') {
-            width: 40%;
-        }
-    }
-    & .content.about {
-        flex-direction: row-reverse;
-        #div2 {
-            transform: rotate(180deg);
-            min-width: 90px;
-        }
+    margin: 5em 0 5em 0;
+    min-height: 450px;
+    background-color: rgb(22, 22, 22);
+    @include flexy($dir: column, $just: center, $align: center);
+    & .content.details {
+        padding-right: .6em;
+        @include flexy($dir: column, $align: flex-end);
+        width: 100%;
         @include mq('lg') {
             width: 60%;
             margin-left: 1em;
         }
-    }
-    & #drum {
-        grid-area: drum;
-        animation: opacityAnim1 1.2s forwards;
-    }
-    & #race {
-        grid-area: race;
-        animation: opacityAnim1 1.2s forwards .4s;
-    }
-    & #mbike {
-        grid-area: mbike;
-        animation: opacityAnim2 1.2s forwards .8s;
-    }
-    & #drum.change1 {
-        grid-area: race;
-        animation: opacityAnim2 1.2s forwards;
-    }
-    & #race.change1 {
-        grid-area: mbike;
-        animation: opacityAnim2 1.2s forwards .4s;
-    }
-    & #mbike.change1 {
-        grid-area: drum;
-        animation: opacityAnim2 1.2s forwards .8s;
-    }
-    & #drum.change2 {
-        grid-area: mbike;
-        animation: opacityAnim3 1.2s forwards;
-    }
-    & #race.change2 {
-        grid-area: drum;
-        animation: opacityAnim3 1.2s forwards .4s;
-    }
-    & #mbike.change2 {
-        grid-area: race;
-        animation: opacityAnim3 1.2s forwards .8s;
-    }
-}
-
-@keyframes hobbyIMG1 {
-    0%,
-    100% {
-        transform: translate(0%, 0%);
-    }
-    50% {
-        transform: translate(10%, 5%);
-    }
-}
-
-@keyframes hobbyIMG2 {
-    0%,
-    100% {
-        transform: translate(0%, 0%);
-    }
-    50% {
-        transform: translate(30%, -10%);
-    }
-}
-
-@keyframes opacityAnim1 {
-    to {
-        transform: scale(1);
-    }
-    from {
-        transform: scale(0);
-    }
-}
-
-@keyframes opacityAnim2 {
-    to {
-        transform: scale(1);
-    }
-    from {
-        transform: scale(0);
-    }
-}
-
-@keyframes opacityAnim3 {
-    to {
-        transform: scale(1);
-    }
-    from {
-        transform: scale(0);
+        & h2 {
+            margin: 0 0 .1em 0;
+            padding: 0 .1em;
+            z-index: 1;
+            color: rgb(209, 9, 9);
+            font-size: 3.5rem;
+            backdrop-filter: blur(2px);
+            background-color: rgba(255, 255, 255, 0.89);
+            border-radius: .3em;
+            @include mq('med') {
+                font-size: 4rem;
+            }
+            @include mq('lg') {
+                font-size: 5rem;
+            }
+        }
+        & p {
+            width: 70%;
+            margin: 0;
+            padding: .2em .3em;
+            z-index: 1;
+            font-weight: 600;
+            font-size: 1.23rem;
+            backdrop-filter: blur(2px);
+            background-color: rgba(255, 255, 255, 0.89);
+            border-radius: .3em;
+            @include mq('med') {
+                font-size: 1.3rem;
+            }
+        }
     }
 }
