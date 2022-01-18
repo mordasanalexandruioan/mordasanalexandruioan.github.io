@@ -8,7 +8,7 @@
         margin-bottom: 0em;
     }
     & .content {
-        padding-top: 20.5em;
+        padding: 20.5em .4em 0;
         z-index: 1;
         @include mq('sm') {
             padding-top: 5em;
@@ -55,6 +55,7 @@
         }
         span:nth-child(3) {
             font-size: 1.2rem;
+            width: 100%;
             @include mq('med') {
                 font-size: 1.4rem;
                 display: block;

@@ -3,7 +3,7 @@ main {
     overflow: hidden;
     & h3 {
         text-align: right;
-        margin: 6em 0 0 0;
+        margin: 6em 0 1em 0;
         padding: 0 .4em 0 0;
         color: rgb(139, 139, 139);
         font-weight: 300;
@@ -18,8 +18,5 @@ main {
     & hr {
         margin: 4em 0;
         border: solid 1px rgb(206, 206, 206);
-    }
-    & article {
-        max-width: 1030px;
     }
 }

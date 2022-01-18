@@ -123,7 +123,7 @@ main {
 }
 main h3 {
   text-align: right;
-  margin: 6em 0 0 0;
+  margin: 6em 0 1em 0;
   padding: 0 0.4em 0 0;
   color: #8b8b8b;
   font-weight: 300;
@@ -140,9 +140,6 @@ main h3 {
 main hr {
   margin: 4em 0;
   border: solid 1px #cecece;
-}
-main article {
-  max-width: 1030px;
 }
 
 footer {
@@ -201,7 +198,7 @@ footer #insta {
   }
 }
 .home-top .content {
-  padding-top: 20.5em;
+  padding: 20.5em 0.4em 0;
   z-index: 1;
 }
 @media (min-width: 570px) {
@@ -261,6 +258,7 @@ footer #insta {
 }
 .home-top .content span:nth-child(3) {
   font-size: 1.2rem;
+  width: 100%;
 }
 @media (min-width: 724px) {
   .home-top .content span:nth-child(3) {
@@ -300,7 +298,7 @@ footer #insta {
   width: 70%;
   padding: 0 0 0 0.5em;
   position: absolute;
-  top: 2.7em;
+  top: 0em;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -348,8 +346,10 @@ footer #insta {
 
 .hobbies {
   margin: 5em 0 5em 0;
-  min-height: 450px;
-  background-color: #161616;
+  padding: 4em 0 4em 0;
+  background: url(/img/drumming.jpeg) no-repeat center/cover;
+  background-blend-mode: multiply;
+  background-color: #202020;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -375,8 +375,6 @@ footer #insta {
   color: #d10909;
   font-size: 3.5rem;
   backdrop-filter: blur(2px);
-  background-color: rgba(255, 255, 255, 0.89);
-  border-radius: 0.3em;
 }
 @media (min-width: 724px) {
   .hobbies .content.details h2 {
@@ -396,8 +394,7 @@ footer #insta {
   font-weight: 600;
   font-size: 1.23rem;
   backdrop-filter: blur(2px);
-  background-color: rgba(255, 255, 255, 0.89);
-  border-radius: 0.3em;
+  color: #f8f8f8;
 }
 @media (min-width: 724px) {
   .hobbies .content.details p {
@@ -407,15 +404,14 @@ footer #insta {
 
 .imgs-loader {
   overflow: hidden;
-}
-@media (min-width: 1024px) {
-  .imgs-loader {
-    width: 50%;
-  }
+  padding: 0 0.5em;
+  display: flex;
+  flex-direction: column;
 }
 .imgs-loader img {
-  width: 90%;
+  width: 87%;
   margin: 0;
+  border-radius: 50%;
 }
 @media (min-width: 570px) {
   .imgs-loader img {
@@ -423,27 +419,10 @@ footer #insta {
   }
 }
 .imgs-loader img:nth-child(1) {
-  float: left;
-  transform: translateY(1em);
-}
-@media (min-width: 570px) {
-  .imgs-loader img:nth-child(1) {
-    transform: translateY(1.5em);
-  }
+  align-self: flex-start;
 }
 .imgs-loader img:nth-child(2) {
-  float: right;
-  transform: translateY(-1em);
-}
-@media (min-width: 570px) {
-  .imgs-loader img:nth-child(2) {
-    transform: translateY(-1.5em);
-  }
-}
-@media (min-width: 1024px) {
-  .imgs-loader img:nth-child(2) {
-    transform: translate(1.5em, -1.5em);
-  }
+  align-self: flex-end;
 }
 
 .list {
@@ -606,8 +585,9 @@ footer #insta {
 }
 
 .work {
-  margin-bottom: 15em;
+  margin-bottom: 10em;
   position: relative;
+  padding: 2em 0;
 }
 @media (min-width: 570px) {
   .work {

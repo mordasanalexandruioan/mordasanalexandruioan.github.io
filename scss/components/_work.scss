@@ -1,6 +1,7 @@
 .work {
-    margin-bottom: 15em;
+    margin-bottom: 10em;
     position: relative;
+    padding: 2em 0;
     @include mq('sm') {
         margin-bottom: 6.7em;
     }
