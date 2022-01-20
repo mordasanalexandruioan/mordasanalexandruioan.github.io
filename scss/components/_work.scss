@@ -2,6 +2,7 @@
     margin-bottom: 10em;
     position: relative;
     padding: 2em 0;
+    @include flexy($align: flex-start);
     @include mq('sm') {
         margin-bottom: 6.7em;
     }

@@ -298,15 +298,11 @@ footer #insta {
   width: 70%;
   padding: 0 0 0 0.5em;
   position: absolute;
-  top: 0em;
+  align-self: center;
+  margin: 0 auto 0 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-}
-@media (min-width: 1024px) {
-  .content.about {
-    width: 50%;
-  }
 }
 .content.about h2 {
   margin: 0 0 0.1em 0;
@@ -403,26 +399,11 @@ footer #insta {
 }
 
 .imgs-loader {
+  width: 100%;
   overflow: hidden;
   padding: 0 0.5em;
   display: flex;
   flex-direction: column;
-}
-.imgs-loader img {
-  width: 87%;
-  margin: 0;
-  border-radius: 50%;
-}
-@media (min-width: 570px) {
-  .imgs-loader img {
-    width: 70%;
-  }
-}
-.imgs-loader img:nth-child(1) {
-  align-self: flex-start;
-}
-.imgs-loader img:nth-child(2) {
-  align-self: flex-end;
 }
 
 .list {
@@ -588,6 +569,8 @@ footer #insta {
   margin-bottom: 10em;
   position: relative;
   padding: 2em 0;
+  display: flex;
+  align-items: flex-start;
 }
 @media (min-width: 570px) {
   .work {
@@ -615,8 +598,7 @@ footer #insta {
 }
 
 .what-i-do {
-  max-width: 470px;
-  margin: 0 auto;
+  margin: 0;
 }
 @media (min-width: 570px) {
   .what-i-do {
@@ -633,6 +615,46 @@ footer #insta {
     width: 100%;
     max-width: none;
   }
+}
+
+.shapeImg {
+  width: 200px;
+  min-width: 200px;
+  height: 200px;
+  min-height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(#fff, #fff) padding-box, linear-gradient(90deg, #310000, #e70808) border-box;
+  border: solid 8px transparent;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shapeImg::before {
+  position: absolute;
+  content: "";
+  width: 92%;
+  height: 92%;
+  border-radius: 50%;
+  z-index: 1;
+}
+.shapeImg.sI1 {
+  align-self: flex-end;
+}
+.shapeImg.sI1::before {
+  background: url(/img/workmechanic.png) no-repeat center/cover;
+}
+.shapeImg.sI2::before {
+  background: url(/img/webdev.jpg) no-repeat center/cover;
+}
+.shapeImg.sI3 {
+  align-self: flex-end;
+}
+.shapeImg.sI3::before {
+  background: url(/img/man-reading.jpg) no-repeat center/cover;
+}
+.shapeImg.sI4::before {
+  background: url(/img/bodybuilding.jpg) no-repeat center/cover;
 }
 
 /*# sourceMappingURL=style.css.map */

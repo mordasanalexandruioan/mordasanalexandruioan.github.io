@@ -1,0 +1,37 @@
+.shapeImg {
+    width: 200px;
+    min-width: 200px;
+    height: 200px;
+    min-height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(#fff, #fff) padding-box, linear-gradient(90deg, rgb(49, 0, 0), rgb(231, 8, 8)) border-box;
+    border: solid 8px transparent;
+    position: relative;
+    @include flexy($align: center, $just: center);
+    &::before {
+        position: absolute;
+        content: '';
+        width: 92%;
+        height: 92%;
+        border-radius: 50%;
+        z-index: 1;
+    }
+    &.sI1 {
+        align-self: flex-end;
+    }
+    &.sI1::before {
+        background: url(/img/workmechanic.png) no-repeat center/cover;
+    }
+    &.sI2::before {
+        background: url(/img/webdev.jpg) no-repeat center/cover;
+    }
+    &.sI3 {
+        align-self: flex-end;
+    }
+    &.sI3::before {
+        background: url(/img/man-reading.jpg) no-repeat center/cover;
+    }
+    &.sI4::before {
+        background: url(/img/bodybuilding.jpg) no-repeat center/cover;
+    }
+}
