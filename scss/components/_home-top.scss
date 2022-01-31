@@ -28,7 +28,7 @@
             background-color: rgba(255, 255, 255, 0.698);
             border-radius: .3em;
             @include mq('sm') {
-                font-size: 2.2rem;
+                font-size: 2.6rem;
             }
             @include mq('med') {
                 font-size: 3.4rem;
@@ -38,28 +38,27 @@
                 max-width: 817px;
             }
         }
-        span {
+        span,
+        p {
             color: rgb(139, 139, 139);
             backdrop-filter: blur(2px);
             background-color: rgba(255, 255, 255, 0.698);
             border-radius: .4em;
         }
-        span:nth-child(1) {
+        #homeTopName {
             text-transform: uppercase;
             font-size: .75rem;
             letter-spacing: .25em;
             font-weight: 300;
-            @include mq('med') {
+            @include mq('sm') {
                 font-size: .86rem;
             }
         }
-        span:nth-child(3) {
+        #homeTopDescribe {
             font-size: 1.2rem;
             width: 100%;
-            @include mq('med') {
-                font-size: 1.4rem;
-                display: block;
-                width: 60%;
+            @include mq('sm') {
+                font-size: 1.3rem;
             }
         }
     }

@@ -1,8 +1,7 @@
 .work {
     margin-bottom: 10em;
-    position: relative;
-    padding: 2em 0;
-    @include flexy($align: flex-start);
+    padding: 2em .4em;
+    @include flexy($align: flex-start, $dir: column);
     @include mq('sm') {
         margin-bottom: 6.7em;
     }

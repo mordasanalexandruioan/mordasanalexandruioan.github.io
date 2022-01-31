@@ -11,6 +11,7 @@
         z-index: -2;
         @include mq('sm') {
             margin-right: 0;
+            margin-top: 3em;
         }
         @include mq('med') {
             width: 600px;

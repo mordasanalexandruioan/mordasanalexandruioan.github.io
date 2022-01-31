@@ -8,6 +8,12 @@
     border: solid 8px transparent;
     position: relative;
     @include flexy($align: center, $just: center);
+    @include mq('sm') {
+        width: 250px;
+        min-width: 250px;
+        height: 250px;
+        min-height: 250px;
+    }
     &::before {
         position: absolute;
         content: '';

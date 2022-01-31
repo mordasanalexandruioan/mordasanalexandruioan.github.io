@@ -74,7 +74,7 @@ aside nav ul a {
   display: block;
   padding: 0.15em 0;
 }
-@media (min-width: 570px) {
+@media (min-width: 520px) {
   aside nav ul a {
     font-size: 2.3rem;
     line-height: 1.8;
@@ -186,7 +186,7 @@ footer #insta {
 .home-top {
   position: relative;
 }
-@media (min-width: 570px) {
+@media (min-width: 520px) {
   .home-top {
     margin-bottom: 10em;
   }
@@ -201,7 +201,7 @@ footer #insta {
   padding: 20.5em 0.4em 0;
   z-index: 1;
 }
-@media (min-width: 570px) {
+@media (min-width: 520px) {
   .home-top .content {
     padding-top: 5em;
     width: 60%;
@@ -223,9 +223,9 @@ footer #insta {
   background-color: rgba(255, 255, 255, 0.698);
   border-radius: 0.3em;
 }
-@media (min-width: 570px) {
+@media (min-width: 520px) {
   .home-top .content h1 {
-    font-size: 2.2rem;
+    font-size: 2.6rem;
   }
 }
 @media (min-width: 724px) {
@@ -239,32 +239,31 @@ footer #insta {
     max-width: 817px;
   }
 }
-.home-top .content span {
+.home-top .content span,
+.home-top .content p {
   color: #8b8b8b;
   backdrop-filter: blur(2px);
   background-color: rgba(255, 255, 255, 0.698);
   border-radius: 0.4em;
 }
-.home-top .content span:nth-child(1) {
+.home-top .content #homeTopName {
   text-transform: uppercase;
   font-size: 0.75rem;
   letter-spacing: 0.25em;
   font-weight: 300;
 }
-@media (min-width: 724px) {
-  .home-top .content span:nth-child(1) {
+@media (min-width: 520px) {
+  .home-top .content #homeTopName {
     font-size: 0.86rem;
   }
 }
-.home-top .content span:nth-child(3) {
+.home-top .content #homeTopDescribe {
   font-size: 1.2rem;
   width: 100%;
 }
-@media (min-width: 724px) {
-  .home-top .content span:nth-child(3) {
-    font-size: 1.4rem;
-    display: block;
-    width: 60%;
+@media (min-width: 520px) {
+  .home-top .content #homeTopDescribe {
+    font-size: 1.3rem;
   }
 }
 
@@ -281,9 +280,10 @@ footer #insta {
   display: block;
   z-index: -2;
 }
-@media (min-width: 570px) {
+@media (min-width: 520px) {
   .bg-img img {
     margin-right: 0;
+    margin-top: 3em;
   }
 }
 @media (min-width: 724px) {
@@ -297,12 +297,8 @@ footer #insta {
 .content.about {
   width: 70%;
   padding: 0 0 0 0.5em;
-  position: absolute;
   align-self: center;
   margin: 0 auto 0 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
 }
 .content.about h2 {
   margin: 0 0 0.1em 0;
@@ -314,9 +310,10 @@ footer #insta {
   background-color: rgba(255, 255, 255, 0.356);
   border-radius: 0.3em;
 }
-@media (min-width: 724px) {
+@media (min-width: 520px) {
   .content.about h2 {
-    font-size: 4rem;
+    font-size: 5rem;
+    margin: 0;
   }
 }
 @media (min-width: 1024px) {
@@ -334,7 +331,7 @@ footer #insta {
   background-color: rgba(255, 255, 255, 0.356);
   border-radius: 0.3em;
 }
-@media (min-width: 724px) {
+@media (min-width: 520px) {
   .content.about p {
     font-size: 1.3rem;
   }
@@ -396,14 +393,6 @@ footer #insta {
   .hobbies .content.details p {
     font-size: 1.3rem;
   }
-}
-
-.imgs-loader {
-  width: 100%;
-  overflow: hidden;
-  padding: 0 0.5em;
-  display: flex;
-  flex-direction: column;
 }
 
 .list {
@@ -549,6 +538,7 @@ footer #insta {
   line-height: 0.8;
   font-size: 1.8rem;
   margin-bottom: 2em;
+  padding-left: 0.4em;
 }
 @media (min-width: 724px) {
   .projects #title-prj {
@@ -567,12 +557,12 @@ footer #insta {
 
 .work {
   margin-bottom: 10em;
-  position: relative;
-  padding: 2em 0;
+  padding: 2em 0.4em;
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
 }
-@media (min-width: 570px) {
+@media (min-width: 520px) {
   .work {
     margin-bottom: 6.7em;
   }
@@ -600,7 +590,7 @@ footer #insta {
 .what-i-do {
   margin: 0;
 }
-@media (min-width: 570px) {
+@media (min-width: 520px) {
   .what-i-do {
     max-width: 550px;
   }
@@ -629,6 +619,14 @@ footer #insta {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (min-width: 520px) {
+  .shapeImg {
+    width: 250px;
+    min-width: 250px;
+    height: 250px;
+    min-height: 250px;
+  }
 }
 .shapeImg::before {
   position: absolute;
