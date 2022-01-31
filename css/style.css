@@ -348,6 +348,11 @@ footer #insta {
   justify-content: center;
   align-items: center;
 }
+@media (min-width: 520px) {
+  .hobbies {
+    height: 65vh;
+  }
+}
 .hobbies .content.details {
   padding-right: 0.6em;
   display: flex;
@@ -355,10 +360,9 @@ footer #insta {
   align-items: flex-end;
   width: 100%;
 }
-@media (min-width: 1024px) {
+@media (min-width: 520px) {
   .hobbies .content.details {
-    width: 60%;
-    margin-left: 1em;
+    align-items: center;
   }
 }
 .hobbies .content.details h2 {
@@ -369,9 +373,9 @@ footer #insta {
   font-size: 3.5rem;
   backdrop-filter: blur(2px);
 }
-@media (min-width: 724px) {
+@media (min-width: 520px) {
   .hobbies .content.details h2 {
-    font-size: 4rem;
+    font-size: 5rem;
   }
 }
 @media (min-width: 1024px) {
@@ -389,9 +393,10 @@ footer #insta {
   backdrop-filter: blur(2px);
   color: #f8f8f8;
 }
-@media (min-width: 724px) {
+@media (min-width: 520px) {
   .hobbies .content.details p {
     font-size: 1.3rem;
+    text-align: center;
   }
 }
 
