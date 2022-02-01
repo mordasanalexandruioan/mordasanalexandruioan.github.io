@@ -32,5 +32,8 @@
         @include mq('sm') {
             font-size: 1.3rem;
         }
+        @include mq('med') {
+            font-size: 1.6rem;
+        }
     }
 }

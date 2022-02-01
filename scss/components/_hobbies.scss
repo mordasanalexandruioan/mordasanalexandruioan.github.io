@@ -25,9 +25,6 @@
             @include mq('sm') {
                 font-size: 5rem;
             }
-            @include mq('lg') {
-                font-size: 5rem;
-            }
         }
         & p {
             width: 70%;
@@ -40,6 +37,10 @@
             color: rgb(248, 248, 248);
             @include mq('sm') {
                 font-size: 1.3rem;
+                text-align: center;
+            }
+            @include mq('med') {
+                font-size: 1.6rem;
                 text-align: center;
             }
         }
